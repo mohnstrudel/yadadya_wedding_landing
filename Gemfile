@@ -42,7 +42,6 @@ gem 'haml-rails'
 gem "font-awesome-rails"
 gem 'bootstrap-glyphicons'
 gem 'devise'
-gem 'rollbar'
 gem "figaro"
 gem 'will_paginate'
 gem 'bootsy' # Screw CKEditor, it's not working on production! 
