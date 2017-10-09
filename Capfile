@@ -17,7 +17,7 @@ install_plugin Capistrano::Puma
 require 'capistrano/figaro_yml'
 require 'capistrano/delayed_job'
 
-require 'rollbar/capistrano3'
+# require 'rollbar/capistrano3'
 require 'capistrano/yarn'
 
 # Include tasks from other gems included in your Gemfile
