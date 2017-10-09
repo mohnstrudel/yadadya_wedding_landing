@@ -25057,3 +25057,435 @@ To update, run `gem install bundler --pre`[0m
 Tasks: TOP => environment
  DEBUG [925d1202] 	
  DEBUG [925d1202] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 11:55:34 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ba039495] Running [ -d ~/.rvm ] on 92.53.97.113
+ DEBUG [ba039495] Command: [ -d ~/.rvm ]
+ DEBUG [ba039495] Finished in 0.441 seconds with exit status 0 (successful).
+ DEBUG [374f31c4] Running ~/.rvm/bin/rvm version on 92.53.97.113
+ DEBUG [374f31c4] Command: ~/.rvm/bin/rvm version
+ DEBUG [374f31c4] 	rvm 1.29.1 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [374f31c4] 	
+ DEBUG [374f31c4] Finished in 0.262 seconds with exit status 0 (successful).
+ DEBUG [de743586] Running ~/.rvm/bin/rvm current on 92.53.97.113
+ DEBUG [de743586] Command: ~/.rvm/bin/rvm current
+ DEBUG [de743586] 	ruby-2.4.1
+ DEBUG [de743586] 	
+ DEBUG [de743586] Finished in 0.251 seconds with exit status 0 (successful).
+ DEBUG [1dcd9bfd] Running ~/.rvm/bin/rvm default do ruby --version on 92.53.97.113
+ DEBUG [1dcd9bfd] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [1dcd9bfd] 	ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+ DEBUG [1dcd9bfd] 	
+ DEBUG [1dcd9bfd] Finished in 0.449 seconds with exit status 0 (successful).
+  INFO [cf4b2aa2] Running /usr/bin/env mkdir -p /tmp on 92.53.97.113
+ DEBUG [cf4b2aa2] Command: /usr/bin/env mkdir -p /tmp
+  INFO [cf4b2aa2] Finished in 0.082 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-wedding_landing-production-mohnstrudel.sh 0.0%
+  INFO Uploading /tmp/git-ssh-wedding_landing-production-mohnstrudel.sh 100.0%
+  INFO [f261288e] Running /usr/bin/env chmod 700 /tmp/git-ssh-wedding_landing-production-mohnstrudel.sh on 92.53.97.113
+ DEBUG [f261288e] Command: /usr/bin/env chmod 700 /tmp/git-ssh-wedding_landing-production-mohnstrudel.sh
+  INFO [f261288e] Finished in 0.089 seconds with exit status 0 (successful).
+  INFO [e5daeddd] Running /usr/bin/env git ls-remote git@github.com:mohnstrudel/yadadya_wedding_landing.git HEAD on 92.53.97.113
+ DEBUG [e5daeddd] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wedding_landing-production-mohnstrudel.sh" ; /usr/bin/env git ls-remote git@github.com:mohnstrudel/yadadya_wedding_landing.git HEAD )
+ DEBUG [e5daeddd] 	312e2ceeba37c93e0dcf56bdda3b81e81d97b341
+ DEBUG [e5daeddd] 		
+ DEBUG [e5daeddd] 	HEAD
+ DEBUG [e5daeddd] 	
+  INFO [e5daeddd] Finished in 1.767 seconds with exit status 0 (successful).
+  INFO [08fab6bf] Running /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/shared /home/deploy/apps/wedding_landing/releases on 92.53.97.113
+ DEBUG [08fab6bf] Command: /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/shared /home/deploy/apps/wedding_landing/releases
+  INFO [08fab6bf] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [34e330f1] Running /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/shared/log /home/deploy/apps/wedding_landing/shared/tmp/pids /home/deploy/apps/wedding_landing/shared/tmp/cache /home/deploy/apps/wedding_landing/shared/tmp/sockets /home/deploy/apps/wedding_landing/shared/vendor/bundle /home/deploy/apps/wedding_landing/shared/public/system /home/deploy/apps/wedding_landing/shared/public/uploads /home/deploy/apps/wedding_landing/shared/node_modules /home/deploy/apps/wedding_landing/shared/client/node_modules /home/deploy/apps/wedding_landing/shared/public/assets on 92.53.97.113
+ DEBUG [34e330f1] Command: /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/shared/log /home/deploy/apps/wedding_landing/shared/tmp/pids /home/deploy/apps/wedding_landing/shared/tmp/cache /home/deploy/apps/wedding_landing/shared/tmp/sockets /home/deploy/apps/wedding_landing/shared/vendor/bundle /home/deploy/apps/wedding_landing/shared/public/system /home/deploy/apps/wedding_landing/shared/public/uploads /home/deploy/apps/wedding_landing/shared/node_modules /home/deploy/apps/wedding_landing/shared/client/node_modules /home/deploy/apps/wedding_landing/shared/public/assets
+  INFO [34e330f1] Finished in 0.087 seconds with exit status 0 (successful).
+ DEBUG [59eddf3a] Running [ -f /home/deploy/apps/wedding_landing/shared/puma.rb ] on 92.53.97.113
+ DEBUG [59eddf3a] Command: [ -f /home/deploy/apps/wedding_landing/shared/puma.rb ]
+ DEBUG [59eddf3a] Finished in 0.090 seconds with exit status 0 (successful).
+ DEBUG [5f0cc348] Running [ -f /home/deploy/apps/wedding_landing/current/REVISION ] on 92.53.97.113
+ DEBUG [5f0cc348] Command: [ -f /home/deploy/apps/wedding_landing/current/REVISION ]
+ DEBUG [5f0cc348] Finished in 0.161 seconds with exit status 0 (successful).
+ DEBUG [2aa2a238] Running /usr/bin/env cat /home/deploy/apps/wedding_landing/current/REVISION 2>/dev/null on 92.53.97.113
+ DEBUG [2aa2a238] Command: /usr/bin/env cat /home/deploy/apps/wedding_landing/current/REVISION 2>/dev/null
+ DEBUG [2aa2a238] 	c6593b871e9b8997be3abf326ac2bc89ac02fa9f
+ DEBUG [2aa2a238] Finished in 0.090 seconds with exit status 0 (successful).
+ DEBUG [25d17246] Running [ -f /home/deploy/apps/wedding_landing/repo/HEAD ] on 92.53.97.113
+ DEBUG [25d17246] Command: [ -f /home/deploy/apps/wedding_landing/repo/HEAD ]
+ DEBUG [25d17246] Finished in 0.084 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/apps/wedding_landing/repo
+ DEBUG [7edc789c] Running if test ! -d /home/deploy/apps/wedding_landing/repo; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/repo'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [7edc789c] Command: if test ! -d /home/deploy/apps/wedding_landing/repo; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/repo'" 1>&2; false; fi
+ DEBUG [7edc789c] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO [56a23d6e] Running /usr/bin/env git remote set-url origin git@github.com:mohnstrudel/yadadya_wedding_landing.git on 92.53.97.113
+ DEBUG [56a23d6e] Command: cd /home/deploy/apps/wedding_landing/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wedding_landing-production-mohnstrudel.sh" ; /usr/bin/env git remote set-url origin git@github.com:mohnstrudel/yadadya_wedding_landing.git )
+  INFO [56a23d6e] Finished in 0.091 seconds with exit status 0 (successful).
+  INFO [9ba8a4bd] Running /usr/bin/env git remote update --prune on 92.53.97.113
+ DEBUG [9ba8a4bd] Command: cd /home/deploy/apps/wedding_landing/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wedding_landing-production-mohnstrudel.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [9ba8a4bd] 	Fetching origin
+ DEBUG [9ba8a4bd] 	
+ DEBUG [9ba8a4bd] 	remote: Counting objects: 6, done.[K
+remote: Compressing objects: 100% (1/1)   [Kremote: Compressing objects: 100% (1/1), done.[K
+ DEBUG [9ba8a4bd] 	remote: Total 6 (delta 5), reused 6 (delta 5), pack-reused 0[K
+ DEBUG [9ba8a4bd] 	Unpacking objects:  16% (1/6)   
+ DEBUG [9ba8a4bd] 	Unpacking objects:  33% (2/6)   
+ DEBUG [9ba8a4bd] 	Unpacking objects:  50% (3/6)   
+ DEBUG [9ba8a4bd] 	Unpacking objects:  66% (4/6)   
+ DEBUG [9ba8a4bd] 	Unpacking objects:  83% (5/6)   
+ DEBUG [9ba8a4bd] 	Unpacking objects: 100% (6/6)   Unpacking objects: 100% (6/6), done.
+ DEBUG [9ba8a4bd] 	From github.com:mohnstrudel/yadadya_wedding_landing
+   de7fa05..312e2ce  master     -> master
+  INFO [9ba8a4bd] Finished in 2.120 seconds with exit status 0 (successful).
+ DEBUG [890074a6] Running if test ! -d /home/deploy/apps/wedding_landing/repo; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/repo'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [890074a6] Command: if test ! -d /home/deploy/apps/wedding_landing/repo; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/repo'" 1>&2; false; fi
+ DEBUG [890074a6] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [7ec8da43] Running /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/releases/20171009085538 on 92.53.97.113
+ DEBUG [7ec8da43] Command: cd /home/deploy/apps/wedding_landing/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wedding_landing-production-mohnstrudel.sh" ; /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/releases/20171009085538 )
+  INFO [7ec8da43] Finished in 0.105 seconds with exit status 0 (successful).
+  INFO [808c69d0] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/wedding_landing/releases/20171009085538 on 92.53.97.113
+ DEBUG [808c69d0] Command: cd /home/deploy/apps/wedding_landing/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wedding_landing-production-mohnstrudel.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/wedding_landing/releases/20171009085538 )
+  INFO [808c69d0] Finished in 2.056 seconds with exit status 0 (successful).
+ DEBUG [579bfaae] Running if test ! -d /home/deploy/apps/wedding_landing/repo; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/repo'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [579bfaae] Command: if test ! -d /home/deploy/apps/wedding_landing/repo; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/repo'" 1>&2; false; fi
+ DEBUG [579bfaae] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [65d2c049] Running /usr/bin/env git rev-list --max-count=1 master on 92.53.97.113
+ DEBUG [65d2c049] Command: cd /home/deploy/apps/wedding_landing/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wedding_landing-production-mohnstrudel.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [65d2c049] 	312e2ceeba37c93e0dcf56bdda3b81e81d97b341
+ DEBUG [65d2c049] Finished in 0.108 seconds with exit status 0 (successful).
+ DEBUG [6b786ce0] Running if test ! -d /home/deploy/apps/wedding_landing/releases/20171009085538; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009085538'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [6b786ce0] Command: if test ! -d /home/deploy/apps/wedding_landing/releases/20171009085538; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009085538'" 1>&2; false; fi
+ DEBUG [6b786ce0] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO [aa86ef32] Running /usr/bin/env echo "312e2ceeba37c93e0dcf56bdda3b81e81d97b341" >> REVISION on 92.53.97.113
+ DEBUG [aa86ef32] Command: cd /home/deploy/apps/wedding_landing/releases/20171009085538 && /usr/bin/env echo "312e2ceeba37c93e0dcf56bdda3b81e81d97b341" >> REVISION
+  INFO [aa86ef32] Finished in 0.091 seconds with exit status 0 (successful).
+  INFO [dda5a3cf] Running /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/releases/20171009085538/config on 92.53.97.113
+ DEBUG [dda5a3cf] Command: /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/releases/20171009085538/config
+  INFO [dda5a3cf] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [204c2f50] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/config/application.yml ] on 92.53.97.113
+ DEBUG [204c2f50] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/config/application.yml ]
+ DEBUG [204c2f50] Finished in 0.096 seconds with exit status 1 (failed).
+ DEBUG [06c45e1e] Running [ -f /home/deploy/apps/wedding_landing/releases/20171009085538/config/application.yml ] on 92.53.97.113
+ DEBUG [06c45e1e] Command: [ -f /home/deploy/apps/wedding_landing/releases/20171009085538/config/application.yml ]
+ DEBUG [06c45e1e] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [cb5edf2c] Running /usr/bin/env rm /home/deploy/apps/wedding_landing/releases/20171009085538/config/application.yml on 92.53.97.113
+ DEBUG [cb5edf2c] Command: /usr/bin/env rm /home/deploy/apps/wedding_landing/releases/20171009085538/config/application.yml
+  INFO [cb5edf2c] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [a5eba7b3] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/config/application.yml /home/deploy/apps/wedding_landing/releases/20171009085538/config/application.yml on 92.53.97.113
+ DEBUG [a5eba7b3] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/config/application.yml /home/deploy/apps/wedding_landing/releases/20171009085538/config/application.yml
+  INFO [a5eba7b3] Finished in 0.085 seconds with exit status 0 (successful).
+  INFO [5ca92101] Running /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/releases/20171009085538 /home/deploy/apps/wedding_landing/releases/20171009085538/tmp /home/deploy/apps/wedding_landing/releases/20171009085538/vendor /home/deploy/apps/wedding_landing/releases/20171009085538/public /home/deploy/apps/wedding_landing/releases/20171009085538/client on 92.53.97.113
+ DEBUG [5ca92101] Command: /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/releases/20171009085538 /home/deploy/apps/wedding_landing/releases/20171009085538/tmp /home/deploy/apps/wedding_landing/releases/20171009085538/vendor /home/deploy/apps/wedding_landing/releases/20171009085538/public /home/deploy/apps/wedding_landing/releases/20171009085538/client
+  INFO [5ca92101] Finished in 0.088 seconds with exit status 0 (successful).
+ DEBUG [e1cc810c] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/log ] on 92.53.97.113
+ DEBUG [e1cc810c] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/log ]
+ DEBUG [e1cc810c] Finished in 0.088 seconds with exit status 1 (failed).
+ DEBUG [143d09a1] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/log ] on 92.53.97.113
+ DEBUG [143d09a1] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/log ]
+ DEBUG [143d09a1] Finished in 0.087 seconds with exit status 0 (successful).
+  INFO [0e7855ca] Running /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009085538/log on 92.53.97.113
+ DEBUG [0e7855ca] Command: /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009085538/log
+  INFO [0e7855ca] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO [0bd5640a] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/log /home/deploy/apps/wedding_landing/releases/20171009085538/log on 92.53.97.113
+ DEBUG [0bd5640a] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/log /home/deploy/apps/wedding_landing/releases/20171009085538/log
+  INFO [0bd5640a] Finished in 0.100 seconds with exit status 0 (successful).
+ DEBUG [c4c9c5b8] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/pids ] on 92.53.97.113
+ DEBUG [c4c9c5b8] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/pids ]
+ DEBUG [c4c9c5b8] Finished in 0.088 seconds with exit status 1 (failed).
+ DEBUG [d6ca439d] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/pids ] on 92.53.97.113
+ DEBUG [d6ca439d] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/pids ]
+ DEBUG [d6ca439d] Finished in 0.100 seconds with exit status 0 (successful).
+  INFO [78dc7ab3] Running /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/pids on 92.53.97.113
+ DEBUG [78dc7ab3] Command: /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/pids
+  INFO [78dc7ab3] Finished in 0.102 seconds with exit status 0 (successful).
+  INFO [c34813bc] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/tmp/pids /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/pids on 92.53.97.113
+ DEBUG [c34813bc] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/tmp/pids /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/pids
+  INFO [c34813bc] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [526b351e] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/cache ] on 92.53.97.113
+ DEBUG [526b351e] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/cache ]
+ DEBUG [526b351e] Finished in 0.084 seconds with exit status 1 (failed).
+ DEBUG [22cc247b] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/cache ] on 92.53.97.113
+ DEBUG [22cc247b] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/cache ]
+ DEBUG [22cc247b] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [d2408150] Running /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/cache on 92.53.97.113
+ DEBUG [d2408150] Command: /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/cache
+  INFO [d2408150] Finished in 0.157 seconds with exit status 0 (successful).
+  INFO [404aa03b] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/tmp/cache /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/cache on 92.53.97.113
+ DEBUG [404aa03b] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/tmp/cache /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/cache
+  INFO [404aa03b] Finished in 0.101 seconds with exit status 0 (successful).
+ DEBUG [b5ef6edf] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/sockets ] on 92.53.97.113
+ DEBUG [b5ef6edf] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/sockets ]
+ DEBUG [b5ef6edf] Finished in 0.087 seconds with exit status 1 (failed).
+ DEBUG [e0a29441] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/sockets ] on 92.53.97.113
+ DEBUG [e0a29441] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/sockets ]
+ DEBUG [e0a29441] Finished in 0.092 seconds with exit status 1 (failed).
+  INFO [81f573e6] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/tmp/sockets /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/sockets on 92.53.97.113
+ DEBUG [81f573e6] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/tmp/sockets /home/deploy/apps/wedding_landing/releases/20171009085538/tmp/sockets
+  INFO [81f573e6] Finished in 0.109 seconds with exit status 0 (successful).
+ DEBUG [85499a2a] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/vendor/bundle ] on 92.53.97.113
+ DEBUG [85499a2a] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/vendor/bundle ]
+ DEBUG [85499a2a] Finished in 0.090 seconds with exit status 1 (failed).
+ DEBUG [e49f6761] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/vendor/bundle ] on 92.53.97.113
+ DEBUG [e49f6761] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/vendor/bundle ]
+ DEBUG [e49f6761] Finished in 0.086 seconds with exit status 1 (failed).
+  INFO [b6839368] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/vendor/bundle /home/deploy/apps/wedding_landing/releases/20171009085538/vendor/bundle on 92.53.97.113
+ DEBUG [b6839368] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/vendor/bundle /home/deploy/apps/wedding_landing/releases/20171009085538/vendor/bundle
+  INFO [b6839368] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [b25c6573] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/public/system ] on 92.53.97.113
+ DEBUG [b25c6573] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/public/system ]
+ DEBUG [b25c6573] Finished in 0.087 seconds with exit status 1 (failed).
+ DEBUG [33769b32] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/public/system ] on 92.53.97.113
+ DEBUG [33769b32] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/public/system ]
+ DEBUG [33769b32] Finished in 0.091 seconds with exit status 1 (failed).
+  INFO [b40c954d] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/public/system /home/deploy/apps/wedding_landing/releases/20171009085538/public/system on 92.53.97.113
+ DEBUG [b40c954d] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/public/system /home/deploy/apps/wedding_landing/releases/20171009085538/public/system
+  INFO [b40c954d] Finished in 0.088 seconds with exit status 0 (successful).
+ DEBUG [1e321187] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/public/uploads ] on 92.53.97.113
+ DEBUG [1e321187] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/public/uploads ]
+ DEBUG [1e321187] Finished in 0.089 seconds with exit status 1 (failed).
+ DEBUG [3f38ec57] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/public/uploads ] on 92.53.97.113
+ DEBUG [3f38ec57] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/public/uploads ]
+ DEBUG [3f38ec57] Finished in 0.089 seconds with exit status 0 (successful).
+  INFO [097ac474] Running /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009085538/public/uploads on 92.53.97.113
+ DEBUG [097ac474] Command: /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009085538/public/uploads
+  INFO [097ac474] Finished in 0.090 seconds with exit status 0 (successful).
+  INFO [41923e36] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/public/uploads /home/deploy/apps/wedding_landing/releases/20171009085538/public/uploads on 92.53.97.113
+ DEBUG [41923e36] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/public/uploads /home/deploy/apps/wedding_landing/releases/20171009085538/public/uploads
+  INFO [41923e36] Finished in 0.092 seconds with exit status 0 (successful).
+ DEBUG [1f9278bd] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/node_modules ] on 92.53.97.113
+ DEBUG [1f9278bd] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/node_modules ]
+ DEBUG [1f9278bd] Finished in 0.089 seconds with exit status 1 (failed).
+ DEBUG [f363716c] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/node_modules ] on 92.53.97.113
+ DEBUG [f363716c] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/node_modules ]
+ DEBUG [f363716c] Finished in 0.089 seconds with exit status 0 (successful).
+  INFO [4ff44106] Running /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009085538/node_modules on 92.53.97.113
+ DEBUG [4ff44106] Command: /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009085538/node_modules
+  INFO [4ff44106] Finished in 0.430 seconds with exit status 0 (successful).
+  INFO [4984c944] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/node_modules /home/deploy/apps/wedding_landing/releases/20171009085538/node_modules on 92.53.97.113
+ DEBUG [4984c944] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/node_modules /home/deploy/apps/wedding_landing/releases/20171009085538/node_modules
+  INFO [4984c944] Finished in 0.092 seconds with exit status 0 (successful).
+ DEBUG [0a9cc330] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/client/node_modules ] on 92.53.97.113
+ DEBUG [0a9cc330] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/client/node_modules ]
+ DEBUG [0a9cc330] Finished in 0.085 seconds with exit status 1 (failed).
+ DEBUG [ba554905] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/client/node_modules ] on 92.53.97.113
+ DEBUG [ba554905] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/client/node_modules ]
+ DEBUG [ba554905] Finished in 0.092 seconds with exit status 1 (failed).
+  INFO [ba3b2574] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/client/node_modules /home/deploy/apps/wedding_landing/releases/20171009085538/client/node_modules on 92.53.97.113
+ DEBUG [ba3b2574] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/client/node_modules /home/deploy/apps/wedding_landing/releases/20171009085538/client/node_modules
+  INFO [ba3b2574] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [cfa12b09] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/public/assets ] on 92.53.97.113
+ DEBUG [cfa12b09] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009085538/public/assets ]
+ DEBUG [cfa12b09] Finished in 0.098 seconds with exit status 1 (failed).
+ DEBUG [6654edf0] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/public/assets ] on 92.53.97.113
+ DEBUG [6654edf0] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009085538/public/assets ]
+ DEBUG [6654edf0] Finished in 0.089 seconds with exit status 0 (successful).
+  INFO [f772a84f] Running /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009085538/public/assets on 92.53.97.113
+ DEBUG [f772a84f] Command: /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009085538/public/assets
+  INFO [f772a84f] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [d005b4d3] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/public/assets /home/deploy/apps/wedding_landing/releases/20171009085538/public/assets on 92.53.97.113
+ DEBUG [d005b4d3] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/public/assets /home/deploy/apps/wedding_landing/releases/20171009085538/public/assets
+  INFO [d005b4d3] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [607c4a8b] Running if test ! -d /home/deploy/apps/wedding_landing/releases/20171009085538; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009085538'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [607c4a8b] Command: if test ! -d /home/deploy/apps/wedding_landing/releases/20171009085538; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009085538'" 1>&2; false; fi
+ DEBUG [607c4a8b] Finished in 0.087 seconds with exit status 0 (successful).
+ DEBUG [69bdcde4] Running ~/.rvm/bin/rvm default do bundle check --path /home/deploy/apps/wedding_landing/shared/bundle on 92.53.97.113
+ DEBUG [69bdcde4] Command: cd /home/deploy/apps/wedding_landing/releases/20171009085538 && ~/.rvm/bin/rvm default do bundle check --path /home/deploy/apps/wedding_landing/shared/bundle
+ DEBUG [69bdcde4] 	[33mWarning: the running version of Bundler (1.15.3) is older than the version that created the lockfile (1.16.0.pre.1). We suggest you upgrade to the latest version of Bundler by running `gem install bundler --pre`.
+[0m
+ DEBUG [69bdcde4] 	[31mThe following gems are missing[0m
+[31m * public_suffix (3.0.0)[0m
+ DEBUG [69bdcde4] 	[31m * addressable (2.5.2)[0m
+[31m * bindex (0.5.0)[0m
+ DEBUG [69bdcde4] 	
+[31m * byebug (9.1.0)[0m
+[31m * capistrano-bundler (1.3.0)[0m
+[31m * capistrano-figaro-yml (1.0.5)[0m
+ DEBUG [69bdcde4] 	
+[31m * capistrano-nvm (0.0.7)[0m
+ DEBUG [69bdcde4] 	[31m * capistrano-rails (1.3.0)[0m
+[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [69bdcde4] 	[31m * capistrano-yarn (2.0.2)[0m
+ DEBUG [69bdcde4] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [69bdcde4] 	[31m * mini_mime (0.1.4)[0m
+ DEBUG [69bdcde4] 	[31m * xpath (2.1.0)[0m
+ DEBUG [69bdcde4] 	
+ DEBUG [69bdcde4] 	[31m * capybara (2.15.4)[0m
+ DEBUG [69bdcde4] 	[31m * childprocess (0.8.0)[0m
+ DEBUG [69bdcde4] 	
+ DEBUG [69bdcde4] 	[31m * diff-lcs (1.3)[0m
+ DEBUG [69bdcde4] 	[31m * factory_girl (4.8.1)[0m
+ DEBUG [69bdcde4] 	[31m * factory_girl_rails (4.8.0)[0m
+ DEBUG [69bdcde4] 	[31m * faker (1.8.4)[0m
+ DEBUG [69bdcde4] 	[31m * ruby_dep (1.5.0)[0m
+ DEBUG [69bdcde4] 	[31m * listen (3.1.5)[0m
+ DEBUG [69bdcde4] 	[31m * rspec-support (3.6.0)[0m
+ DEBUG [69bdcde4] 	[31m * rspec-core (3.6.0)[0m
+ DEBUG [69bdcde4] 	[31m * rspec-expectations (3.6.0)[0m
+ DEBUG [69bdcde4] 	
+ DEBUG [69bdcde4] 	[31m * rspec-mocks (3.6.0)[0m
+ DEBUG [69bdcde4] 	
+ DEBUG [69bdcde4] 	[31m * rspec-rails (3.6.1)[0m
+ DEBUG [69bdcde4] 	[31m * rubyzip (1.2.1)[0m
+ DEBUG [69bdcde4] 	[31m * selenium-webdriver (3.6.0)[0m
+ DEBUG [69bdcde4] 	[31m * spring (2.0.2)[0m
+ DEBUG [69bdcde4] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [69bdcde4] 	[31m * web-console (3.5.1)[0m
+ DEBUG [69bdcde4] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [69bdcde4] Finished in 0.897 seconds with exit status 1 (failed).
+  INFO [84d51b98] Running ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/wedding_landing/shared/bundle --without development test --deployment --quiet on 92.53.97.113
+ DEBUG [84d51b98] Command: cd /home/deploy/apps/wedding_landing/releases/20171009085538 && ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/wedding_landing/shared/bundle --without development test --deployment --quiet
+ DEBUG [84d51b98] 	Warning, new version of rvm available '1.29.3', you are using older version '1.29.1'.
+You can disable this warning with:    echo rvm_autoupdate_flag=0 >> ~/.rvmrc
+You can enable  auto-update  with:    echo rvm_autoupdate_flag=2 >> ~/.rvmrc
+ DEBUG [84d51b98] 	[33mThe latest bundler is 1.16.0.pre.3, but you are currently running 1.15.3.
+To update, run `gem install bundler --pre`[0m
+  INFO [84d51b98] Finished in 4.232 seconds with exit status 0 (successful).
+ DEBUG [fd0ef262] Running if test ! -d /home/deploy/apps/wedding_landing/releases/20171009085538/client; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009085538/client'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [fd0ef262] Command: if test ! -d /home/deploy/apps/wedding_landing/releases/20171009085538/client; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009085538/client'" 1>&2; false; fi
+ DEBUG [fd0ef262] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [10fe464a] Running /usr/bin/env yarn install --production --silent --no-progress on 92.53.97.113
+ DEBUG [10fe464a] Command: cd /home/deploy/apps/wedding_landing/releases/20171009085538/client && /usr/bin/env yarn install --production --silent --no-progress
+ DEBUG [10fe464a] 	[1G
+ DEBUG [10fe464a] 	⠁ 
+ DEBUG [10fe464a] 	[0K
+ DEBUG [10fe464a] 	[2K
+ DEBUG [10fe464a] 	[1G
+  INFO [10fe464a] Finished in 0.814 seconds with exit status 0 (successful).
+ DEBUG [ccae8c0f] Running if test ! -d /home/deploy/apps/wedding_landing/releases/20171009085538; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009085538'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [ccae8c0f] Command: if test ! -d /home/deploy/apps/wedding_landing/releases/20171009085538; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009085538'" 1>&2; false; fi
+ DEBUG [ccae8c0f] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [7c36eec2] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile on 92.53.97.113
+ DEBUG [7c36eec2] Command: cd /home/deploy/apps/wedding_landing/releases/20171009085538 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [7c36eec2] 	[2K
+ DEBUG [7c36eec2] 	[1G
+ DEBUG [7c36eec2] 	[1myarn install v0.27.5[22m
+ DEBUG [7c36eec2] 	[2K
+ DEBUG [7c36eec2] 	[1G
+ DEBUG [7c36eec2] 	[2m[1/4][22m Resolving packages...
+ DEBUG [7c36eec2] 	[1G
+ DEBUG [7c36eec2] 	⠁ 
+ DEBUG [7c36eec2] 	[0K
+ DEBUG [7c36eec2] 	[1G
+ DEBUG [7c36eec2] 	⠂ webpack-dev-server@^2.6.1
+ DEBUG [7c36eec2] 	[0K
+ DEBUG [7c36eec2] 	[1G
+ DEBUG [7c36eec2] 	⠄ yargs@^6.0.0
+ DEBUG [7c36eec2] 	[0K
+ DEBUG [7c36eec2] 	[1G⡀ yargs-parser@^4.2.0[0K
+ DEBUG [7c36eec2] 	[1G
+ DEBUG [7c36eec2] 	⢀ is-fullwidth-code-point@^1.0.0
+ DEBUG [7c36eec2] 	[0K
+ DEBUG [7c36eec2] 	[1G
+ DEBUG [7c36eec2] 	⠠ number-is-nan@^1.0.0
+ DEBUG [7c36eec2] 	[0K
+ DEBUG [7c36eec2] 	[1G
+ DEBUG [7c36eec2] 	⠐ repeat-string@^1.5.2
+ DEBUG [7c36eec2] 	[0K
+ DEBUG [7c36eec2] 	[2K
+ DEBUG [7c36eec2] 	[1G
+ DEBUG [7c36eec2] 	[2K
+ DEBUG [7c36eec2] 	[1G
+ DEBUG [7c36eec2] 	[32msuccess[39m Already up-to-date.
+ DEBUG [7c36eec2] 	
+ DEBUG [7c36eec2] 	[2K
+ DEBUG [7c36eec2] 	[1G
+ DEBUG [7c36eec2] 	Done in 1.17s.
+ DEBUG [7c36eec2] 	
+ DEBUG [7c36eec2] 	Webpacker is installed 🎉 🍰
+Using /home/deploy/apps/wedding_landing/releases/20171009085538/config/webpacker.yml file for setting up webpack paths
+ DEBUG [7c36eec2] 	Compiling…
+ DEBUG [7c36eec2] 	Compiled all packs in /home/deploy/apps/wedding_landing/releases/20171009085538/public/packs
+ DEBUG [7c36eec2] 	
+  INFO [7c36eec2] Finished in 17.362 seconds with exit status 0 (successful).
+ DEBUG [67a2ea71] Running if test ! -d /home/deploy/apps/wedding_landing/releases/20171009085538; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009085538'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [67a2ea71] Command: if test ! -d /home/deploy/apps/wedding_landing/releases/20171009085538; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009085538'" 1>&2; false; fi
+ DEBUG [67a2ea71] Finished in 0.095 seconds with exit status 0 (successful).
+  INFO [59c875be] Running /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/releases/20171009085538/assets_manifest_backup on 92.53.97.113
+ DEBUG [59c875be] Command: cd /home/deploy/apps/wedding_landing/releases/20171009085538 && /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/releases/20171009085538/assets_manifest_backup
+  INFO [59c875be] Finished in 0.091 seconds with exit status 0 (successful).
+ DEBUG [8b9dc70c] Running /usr/bin/env ls /home/deploy/apps/wedding_landing/releases/20171009085538/public/assets/.sprockets-manifest* on 92.53.97.113
+ DEBUG [8b9dc70c] Command: cd /home/deploy/apps/wedding_landing/releases/20171009085538 && /usr/bin/env ls /home/deploy/apps/wedding_landing/releases/20171009085538/public/assets/.sprockets-manifest*
+ DEBUG [8b9dc70c] 	/home/deploy/apps/wedding_landing/releases/20171009085538/public/assets/.sprockets-manifest-4428f3828780a11b5985b3f899e4c526.json
+ DEBUG [8b9dc70c] Finished in 0.090 seconds with exit status 0 (successful).
+ DEBUG [b4f3d83e] Running /usr/bin/env ls /home/deploy/apps/wedding_landing/releases/20171009085538/public/assets/.sprockets-manifest* on 92.53.97.113
+ DEBUG [b4f3d83e] Command: cd /home/deploy/apps/wedding_landing/releases/20171009085538 && /usr/bin/env ls /home/deploy/apps/wedding_landing/releases/20171009085538/public/assets/.sprockets-manifest*
+ DEBUG [b4f3d83e] 	/home/deploy/apps/wedding_landing/releases/20171009085538/public/assets/.sprockets-manifest-4428f3828780a11b5985b3f899e4c526.json
+ DEBUG [b4f3d83e] Finished in 0.091 seconds with exit status 0 (successful).
+  INFO [3c6f3e08] Running /usr/bin/env cp /home/deploy/apps/wedding_landing/releases/20171009085538/public/assets/.sprockets-manifest-4428f3828780a11b5985b3f899e4c526.json /home/deploy/apps/wedding_landing/releases/20171009085538/assets_manifest_backup on 92.53.97.113
+ DEBUG [3c6f3e08] Command: cd /home/deploy/apps/wedding_landing/releases/20171009085538 && /usr/bin/env cp /home/deploy/apps/wedding_landing/releases/20171009085538/public/assets/.sprockets-manifest-4428f3828780a11b5985b3f899e4c526.json /home/deploy/apps/wedding_landing/releases/20171009085538/assets_manifest_backup
+  INFO [3c6f3e08] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [885e462e] Running if test ! -d /home/deploy/apps/wedding_landing/releases/20171009085538; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009085538'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [885e462e] Command: if test ! -d /home/deploy/apps/wedding_landing/releases/20171009085538; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009085538'" 1>&2; false; fi
+ DEBUG [885e462e] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [c82419de] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate on 92.53.97.113
+ DEBUG [c82419de] Command: cd /home/deploy/apps/wedding_landing/releases/20171009085538 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+  INFO [c82419de] Finished in 3.895 seconds with exit status 0 (successful).
+  INFO [dde0df2e] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/releases/20171009085538 /home/deploy/apps/wedding_landing/releases/current on 92.53.97.113
+ DEBUG [dde0df2e] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/releases/20171009085538 /home/deploy/apps/wedding_landing/releases/current
+  INFO [dde0df2e] Finished in 0.112 seconds with exit status 0 (successful).
+  INFO [88f9b3e7] Running /usr/bin/env mv /home/deploy/apps/wedding_landing/releases/current /home/deploy/apps/wedding_landing on 92.53.97.113
+ DEBUG [88f9b3e7] Command: /usr/bin/env mv /home/deploy/apps/wedding_landing/releases/current /home/deploy/apps/wedding_landing
+  INFO [88f9b3e7] Finished in 0.107 seconds with exit status 0 (successful).
+ DEBUG [84dd5696] Running if test ! -d /home/deploy/apps/wedding_landing/releases/20171009085538; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009085538'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [84dd5696] Command: if test ! -d /home/deploy/apps/wedding_landing/releases/20171009085538; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009085538'" 1>&2; false; fi
+ DEBUG [84dd5696] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [8c6e5f07] Running ~/.rvm/bin/rvm default do bundle exec bin/delayed_job -n 1 restart on 92.53.97.113
+ DEBUG [8c6e5f07] Command: cd /home/deploy/apps/wedding_landing/releases/20171009085538 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec bin/delayed_job -n 1 restart )
+ DEBUG [8c6e5f07] 	delayed_job: trying to stop process with pid 9464...
+ DEBUG [8c6e5f07] 	
+ DEBUG [8c6e5f07] 	delayed_job: process with pid 9464 successfully stopped.
+ DEBUG [8c6e5f07] 	
+ DEBUG [8c6e5f07] 	delayed_job: process with pid 12817 started.
+ DEBUG [8c6e5f07] 	
+  INFO [8c6e5f07] Finished in 7.478 seconds with exit status 0 (successful).
+ DEBUG [1161dae3] Running /usr/bin/env ls -x /home/deploy/apps/wedding_landing/releases on 92.53.97.113
+ DEBUG [1161dae3] Command: /usr/bin/env ls -x /home/deploy/apps/wedding_landing/releases
+ DEBUG [1161dae3] 	20171009082949
+ DEBUG [1161dae3] 		
+ DEBUG [1161dae3] 	20171009083408
+ DEBUG [1161dae3] 		
+ DEBUG [1161dae3] 	20171009083848
+ DEBUG [1161dae3] 		
+ DEBUG [1161dae3] 	20171009085310
+ DEBUG [1161dae3] 		
+ DEBUG [1161dae3] 	20171009085538
+ DEBUG [1161dae3] 	
+ DEBUG [1161dae3] Finished in 0.101 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 5 deployed releases on 92.53.97.113
+  INFO No old releases (keeping newest 5) on 92.53.97.113
+ DEBUG [33c74c0e] Running if test ! -d /home/deploy/apps/wedding_landing/current; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/current'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [33c74c0e] Command: if test ! -d /home/deploy/apps/wedding_landing/current; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/current'" 1>&2; false; fi
+ DEBUG [33c74c0e] Finished in 0.086 seconds with exit status 0 (successful).
+ DEBUG [fc14ffdd] Running [ -f /home/deploy/apps/wedding_landing/shared/tmp/pids/puma.pid ] on 92.53.97.113
+ DEBUG [fc14ffdd] Command: [ -f /home/deploy/apps/wedding_landing/shared/tmp/pids/puma.pid ]
+ DEBUG [fc14ffdd] Finished in 0.091 seconds with exit status 0 (successful).
+ DEBUG [528f671f] Running /usr/bin/env kill -0 $( cat /home/deploy/apps/wedding_landing/shared/tmp/pids/puma.pid ) on 92.53.97.113
+ DEBUG [528f671f] Command: cd /home/deploy/apps/wedding_landing/current && ( export RACK_ENV="production" ; /usr/bin/env kill -0 $( cat /home/deploy/apps/wedding_landing/shared/tmp/pids/puma.pid ) )
+ DEBUG [528f671f] Finished in 0.123 seconds with exit status 0 (successful).
+  INFO [6bd5f2e0] Running ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/deploy/apps/wedding_landing/shared/tmp/pids/puma.state -F /home/deploy/apps/wedding_landing/shared/puma.rb restart on 92.53.97.113
+ DEBUG [6bd5f2e0] Command: cd /home/deploy/apps/wedding_landing/current && ( export RACK_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/deploy/apps/wedding_landing/shared/tmp/pids/puma.state -F /home/deploy/apps/wedding_landing/shared/puma.rb restart )
+ DEBUG [6bd5f2e0] 	Command restart sent success
+  INFO [6bd5f2e0] Finished in 0.680 seconds with exit status 0 (successful).
+ DEBUG [1fdda85f] Running if test ! -d /home/deploy/apps/wedding_landing/releases; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [1fdda85f] Command: if test ! -d /home/deploy/apps/wedding_landing/releases; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases'" 1>&2; false; fi
+ DEBUG [1fdda85f] Finished in 0.087 seconds with exit status 0 (successful).
+  INFO [66027cb4] Running /usr/bin/env echo "Branch master (at 312e2ceeba37c93e0dcf56bdda3b81e81d97b341) deployed as release 20171009085538 by mohnstrudel" >> /home/deploy/apps/wedding_landing/revisions.log on 92.53.97.113
+ DEBUG [66027cb4] Command: cd /home/deploy/apps/wedding_landing/releases && /usr/bin/env echo "Branch master (at 312e2ceeba37c93e0dcf56bdda3b81e81d97b341) deployed as release 20171009085538 by mohnstrudel" >> /home/deploy/apps/wedding_landing/revisions.log
+  INFO [66027cb4] Finished in 0.089 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 11:58:47 +0300 cap production setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2d6f9744] Running [ -d ~/.rvm ] on 92.53.97.113
+ DEBUG [2d6f9744] Command: [ -d ~/.rvm ]
+ DEBUG [2d6f9744] Finished in 0.422 seconds with exit status 0 (successful).
+ DEBUG [381dfa1c] Running ~/.rvm/bin/rvm version on 92.53.97.113
+ DEBUG [381dfa1c] Command: ~/.rvm/bin/rvm version
+ DEBUG [381dfa1c] 	rvm 1.29.1 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [381dfa1c] Finished in 0.259 seconds with exit status 0 (successful).
+ DEBUG [e6be5c01] Running ~/.rvm/bin/rvm current on 92.53.97.113
+ DEBUG [e6be5c01] Command: ~/.rvm/bin/rvm current
+ DEBUG [e6be5c01] 	ruby-2.4.1
+ DEBUG [e6be5c01] Finished in 0.256 seconds with exit status 0 (successful).
+ DEBUG [9609672e] Running ~/.rvm/bin/rvm default do ruby --version on 92.53.97.113
+ DEBUG [9609672e] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [9609672e] 	ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+ DEBUG [9609672e] Finished in 0.433 seconds with exit status 0 (successful).
