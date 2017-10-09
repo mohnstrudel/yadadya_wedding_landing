@@ -12,7 +12,10 @@
     = javascript_include_tag 'https://widget.cloudpayments.ru/bundles/cloudpayments'
     =render 'layouts/social_head'
   %body.g-body
-    =yield
+    -if @settings.try(:active)
+      =yield
+    -else
+      =render 'layouts/not_available'  
     =render 'layouts/popups'
     =javascript_include_tag 'social'
     =render 'layouts/social'

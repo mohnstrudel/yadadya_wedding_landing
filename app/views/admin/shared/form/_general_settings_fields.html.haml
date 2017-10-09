@@ -35,3 +35,11 @@
       =render partial: 'admin/shared/form/language_select', locals: { f: f, object: object }
       %span.help-block.m-b-none Site url (http://example.com)
   .hr-line-dashed
+
+-if object.respond_to?(:active)
+  .form-group
+    %label.col-sm-2.control-label Сайт активен для публичного доступа?
+    .col-sm-10
+      =f.check_box :active, class: 'form-control'
+      %span.help-block.m-b-none Site url (http://example.com)
+  .hr-line-dashed
