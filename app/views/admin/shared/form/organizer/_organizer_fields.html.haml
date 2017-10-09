@@ -1,0 +1,31 @@
+-if object.respond_to?(:logo_grey)
+  .form-group
+    %label.col-sm-2.control-label Серый логотип
+    .col-sm-8
+      .fileinput.fileinput-new.input-group{"data-provides" => "fileinput"}
+        .form-control{"data-trigger" => "fileinput"}
+          %i.glyphicon.glyphicon-file.fileinput-exists
+          %span.fileinput-filename
+        %span.input-group-addon.btn.btn-default.btn-file
+          %span.fileinput-new Выбрать файл
+          %span.fileinput-exists Изменить
+          =f.file_field :logo_grey
+          
+        %a.input-group-addon.btn.btn-default.fileinput-exists{"data-dismiss" => "fileinput", :href => "#"} Удалить
+    .col-sm-2
+      -unless object.logo_grey.try(:file).nil?
+        -if object.logo_grey.file.exists?
+          -if object.logo_grey.url(:mini_thumb).present?
+            =image_tag object.logo_grey.url(:mini_thumb)
+          -else
+            =image_tag object.logo_grey.url
+  .hr-line-dashed
+
+-if object.respond_to?(:logo_additional_css)
+  .form-group
+    %label.col-sm-2.control-label
+      Выбрать тип логотипа
+    .col-sm-10
+      =f.select :logo_additional_css, options_for_select(Rails.application.config.organizer_logo_css.map {|item| item}, object.logo_additional_css), {}, {class: 'form-control select2_logo_css'}
+      %span.help-block.m-b-none Очень важно, что бы логотипы нормально отображались.
+  .hr-line-dashed

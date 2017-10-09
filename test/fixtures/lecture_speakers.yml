@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lecture: one
+  speaker: one
+
+two:
+  lecture: two
+  speaker: two

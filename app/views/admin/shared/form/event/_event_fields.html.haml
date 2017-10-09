@@ -1,0 +1,79 @@
+-if object.respond_to?(:event_type)
+  .form-group
+    %label.col-sm-2.control-label Тип мероприятия
+    .col-sm-10
+      =f.text_field :event_type, class: 'form-control'
+      %span.help-block.m-b-none Например, 'бизнес-завтрак'
+  .hr-line-dashed
+-if object.respond_to?(:subtitle)
+  .form-group
+    %label.col-sm-2.control-label Подзаголовок
+    .col-sm-10
+      =f.text_field :subtitle, class: 'form-control'
+      %span.help-block.m-b-none Текст распологается под большим зеленым заголовком
+  .hr-line-dashed
+-if object.respond_to?(:place)
+  .form-group
+    %label.col-sm-2.control-label
+      Место проведения
+    .col-sm-10
+      =f.text_field :place, class: 'form-control'
+      %span.help-block.m-b-none Например "Бар Диктатура"
+  .hr-line-dashed
+
+-if object.respond_to?(:address)
+  .form-group
+    %label.col-sm-2.control-label
+      Адрес места проведения
+    .col-sm-10
+      =f.text_field :address, class: 'form-control'
+      %span.help-block.m-b-none Например: г. Москва, ул. Лесная Набережная, д. 15, корпус. 56, офис 31
+  .hr-line-dashed
+
+-if object.respond_to?(:date)
+  .form-group
+    %label.col-sm-2.control-label
+      Дата мероприятия
+    .col-sm-10
+      =f.text_field :date, class: 'form-control'
+      %span.help-block.m-b-none Дата для людей, т.е. нужно написать словами, всегда число и месяц со склоненем. Например: 17 августа
+  .hr-line-dashed
+
+-if object.respond_to?(:sortable_date)
+  .form-group#datepicker
+    %label.col-sm-2.control-label
+      Дата для сортировки
+    .col-sm-10
+      =f.text_field :sortable_date, class: 'form-control'
+      %span.help-block.m-b-none Дата для сортировки, просто выбрать дату в календаре
+  .hr-line-dashed
+
+-if object.respond_to?(:organizers)
+  .form-group
+    %label.col-sm-2.control-label
+      Организаторы
+    .col-sm-10
+      =f.collection_select(:organizer_ids, Organizer.all, :id, :title, { include_blank: "Выбрать организатора"}, class: 'form-control select2_organizers', multiple: true)
+  .hr-line-dashed
+
+-if object.respond_to?(:lectures) && object.class.name != "Speaker"
+  .form-group
+    %label.col-sm-2.control-label
+      Доклады
+    .col-sm-10
+      =f.fields_for :lectures do |lecture_builder|
+        =render partial: 'admin/shared/form/event/lecture_fields', locals: { f: lecture_builder }
+      %span.help-block.m-b-none
+        =link_to_add_fields "Добавить доклад", f, :lectures, 'admin/shared/form/event/lecture_fields', class: 'btn btn-default'
+  .hr-line-dashed
+
+-if object.respond_to?(:available_tickets)
+  .form-group
+    %label.col-sm-2.control-label
+      Билеты на событие
+    .col-sm-10
+      =f.fields_for :available_tickets do |ticket_builder|
+        =render partial: 'admin/shared/form/event/ticket_fields', locals: { f: ticket_builder }
+      %span.help-block.m-b-none
+        =link_to_add_fields "Добавить билет", f, :available_tickets, 'admin/shared/form/event/ticket_fields', class: 'btn btn-default'
+  .hr-line-dashed

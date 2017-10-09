@@ -1,0 +1,59 @@
+-if object.respond_to?(:event_id)
+  .form-group
+    %label.col-lg-2.control-label
+      Найти мероприятие
+    .col-lg-10
+      =f.select :event_id, Event.all.map { |event| [ "#{event.title} - #{event.subtitle}", event.id ] }, {}, { class: "form-control m-b select2_archives" } 
+  .hr-line-dashed
+
+-if object.respond_to?(:youtube)
+  .form-group
+    %label.col-sm-2.control-label
+      YouTube
+    .col-sm-10
+      =f.text_field :youtube, class: 'form-control'
+      %span.help-block.m-b-none Ссылка на видео YouTube (обязательно с https://)
+  .hr-line-dashed
+
+-if object.respond_to?(:zip)
+  .form-group
+    %label.col-sm-2.control-label
+      Ссылка на файл
+    .col-sm-10
+      =f.text_field :zip, class: 'form-control'
+      %span.help-block.m-b-none Ссылка на файл с архивом (обязательно с https://)
+  .hr-line-dashed
+
+-if object.respond_to?(:pictures)
+  .form-group
+    %label.col-sm-2.control-label Загрузить фото
+    .col-sm-10
+      .fileinput.fileinput-new.input-group{"data-provides" => "fileinput"}
+        .form-control{"data-trigger" => "fileinput"}
+          %i.glyphicon.glyphicon-file.fileinput-exists
+          %span.fileinput-filename
+        %span.input-group-addon.btn.btn-default.btn-file
+          %span.fileinput-new Выбрать файлы
+          %span.fileinput-exists Изменить
+          =f.file_field :pictures, multiple: true, name: "pictures[]"
+          
+        %a.input-group-addon.btn.btn-default.fileinput-exists{"data-dismiss" => "fileinput", :href => "#"} Удалить
+  .hr-line-dashed
+
+-if object.respond_to?(:pictures)
+  .col-lg-12.animated.fadeInRight
+    .row
+      .col-lg-12
+        =f.fields_for :pictures do |builder|
+          .file-box
+            .file
+              %a{:href => "#"}
+                %span.corner
+                .image
+                  =image_tag builder.object.image.news_thumb, class: 'img-responsive'
+                .file-name
+                  =builder.object.created_at
+                  %br/
+                  %small
+                    =builder.label :_destroy, 'Удалить'
+                    =builder.check_box :_destroy

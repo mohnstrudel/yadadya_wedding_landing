@@ -1,0 +1,12 @@
+#speakers-slider.g-speakers__list
+  -@speakers.each_with_index do |speaker, index|
+    .g-speakers__item.js-animation.js-animation_tablet.js-animation_fadeInUp{"data-animation-delay" => "#{100+300*index}ms"}
+      .g-speakers__img-wrapper
+        =image_tag speaker.picture, class: 'g-speakers__img'
+      %h3.g-people-name.g-speakers__name
+        ="#{speaker.first_name} #{speaker.last_name}"
+      %p.g-speakers__desc
+        %nobr=speaker.position
+        =speaker.company
+      %a.g-btn.g-btn_transparent.g-btn_facebook{:href => speaker.facebook, :target => "_blank"}
+        %i.g-icon

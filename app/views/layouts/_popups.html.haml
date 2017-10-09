@@ -1,0 +1,35 @@
+#approval-popup.g-popup
+  .g-popup__content
+    %a.g-popup__close.js-close
+      %svg.g-popup__icon
+        %use{"xlink:href" => "#ic-close"}
+    %h3.g-popup__title
+      %span.g-popup__title-text
+    %p.g-popup__text
+      Спасибо!
+      %br Наш модератор проверяет вашу заявку.
+    %a.g-btn.g-btn_submit.js-close Закрыть
+
+#success-nocost-popup.g-popup
+  .g-popup__content
+    %a.g-popup__close.js-close
+      %svg.g-popup__icon
+        %use{"xlink:href" => "#ic-close"}
+    %h3.g-popup__title
+      %span.g-popup__title-text
+    %p.g-popup__text
+      Спасибо! 
+      %br Вы успешно зарегистрировались на мероприятие.
+    %a.g-btn.g-btn_submit.js-close Закрыть
+
+#success-cost-popup.g-popup
+  .g-popup__content
+    %a.g-popup__close.js-close
+      %svg.g-popup__icon
+        %use{"xlink:href" => "#ic-close"}
+    %h3.g-popup__title
+      %span.g-popup__title-text
+    %p.g-popup__text
+      Спасибо! 
+      %br Для полноценной регистрации осталось оплатить билет. На указанную почту вы получите ссылку для оплаты.
+    %a.g-btn.g-btn_submit.js-close Закрыть

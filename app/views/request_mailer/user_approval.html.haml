@@ -1,0 +1,8 @@
+%p{:style => "color: #0e2f22;  font-size: 20px; line-height: 30px; margin: 0;"}
+  ="#{@request.first_name.capitalize}, добрый день!"
+%p{:style => "color: #0e2f22;  font-size: 20px; line-height: 30px; margin: 0;"} 
+  ="Поздравляем, ваша заявка одобрена, вы успешно зарегистрировались на бизнес-завтрак «#{link_to get_titles(@event), @event.facebook}».".html_safe
+%p{:style => "color: #0e2f22;font-weight: 300;font-size: 20px;line-height: 30px;margin: -1px auto 35px;"}
+  Ждем вас на нашем мероприятии
+  %a{:href => "#", :style => "color: #16d488; text-decoration: none;"}
+    ="#{@event.date}, с #{@event.start_time} до #{@event.end_time}, #{@event.place}, по адресу: #{@event.address}."

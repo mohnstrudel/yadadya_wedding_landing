@@ -1,0 +1,61 @@
+.wrapper.wrapper-content
+  .row
+    .col-lg-12
+      .ibox.float-e-margins
+        .ibox-content
+          %div
+            %span.pull-right.text-right
+              %small
+                График и расчеты приведены для 
+                %strong актуального мероприятия
+              %br/
+              Всего продано билетов: ххх.хххх
+            %h1.m-b-xs=@all_requests
+            %h3.font-bold.no-margins
+              Количество заявок на текущее мероприятие
+            %small И количество одобрений
+          %div#chartData{data: {labels: @two_weeks_requests}}
+            %canvas#lineChart{:height => "70"}
+          .m-t-md
+            %small.pull-right
+              %i.fa.fa-clock-o
+              ="Данные актуальны на #{DateTime.now.strftime('%d/%m, %R')}"
+            %small
+              %strong Отчет по продажам:
+              The value has been changed over time, and last month reached a level over $50,000.
+  .row
+    .col-lg-4
+      .ibox.float-e-margins
+        .ibox-title
+          %span.label.label-primary.pull-right Сегодня
+          %h5 Заявки
+        .ibox-content
+          %h1.no-margins=@today_requests
+          .stat-percent.font-bold.text-navy
+            20%
+            %i.fa.fa-level-up
+          %small За сегодня
+    .col-lg-4
+      .ibox.float-e-margins
+        .ibox-title
+          %span.label.label-info.pull-right Итого
+          %h5 Всего заявок
+        .ibox-content
+          %h1.no-margins=@all_requests
+          .stat-percent.font-bold.text-info
+            40%
+            %i.fa.fa-level-up
+          %small Текущее мероприятие (общее кол-во)
+    .col-lg-4
+      .ibox.float-e-margins
+        .ibox-title
+          %span.label.label-warning.pull-right Итого
+          %h5 Одобренные заявки
+        .ibox-content
+          %h1.no-margins=@approved_requests
+          .stat-percent.font-bold.text-warning
+            16%
+            %i.fa.fa-level-up
+          %small Текущее мероприятие (общее кол-во)
+  .row
+    / =render 'data_feed'

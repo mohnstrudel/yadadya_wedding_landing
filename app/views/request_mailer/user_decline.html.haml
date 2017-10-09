@@ -1,0 +1,9 @@
+
+%p{:style => "color: #0e2f22;  font-size: 20px; line-height: 30px; margin: 0;"}
+  ="#{@request.first_name.capitalize}, добрый день!"
+%p{:style => "color: #0e2f22;  font-size: 20px; line-height: 30px; margin: 0;"} 
+  ="К сожалению, ваша заявка на бизнес-завтрак «#{link_to get_titles(@event), @event.facebook}» не прошла модерацию. Возможно, вы не указали все необходимые данные при регистрации или являетесь представителем агентства.".html_safe
+
+%p{:style => "color: #0e2f22;font-weight: 300;font-size: 20px;line-height: 30px;margin: -1px auto 35px;"}
+  Благодарим за понимание.
+

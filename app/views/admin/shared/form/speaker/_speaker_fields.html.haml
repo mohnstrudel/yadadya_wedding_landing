@@ -1,0 +1,62 @@
+-if object.respond_to?(:picture)
+  .form-group
+    %label.col-sm-2.control-label
+      Фотография
+    .col-sm-8
+      .fileinput.fileinput-new.input-group{"data-provides" => "fileinput"}
+        .form-control{"data-trigger" => "fileinput"}
+          %i.glyphicon.glyphicon-file.fileinput-exists
+          %span.fileinput-filename
+        %span.input-group-addon.btn.btn-default.btn-file
+          %span.fileinput-new
+            Выбрать фото
+          %span.fileinput-exists
+            Поменять
+          =f.file_field :picture
+          
+        %a.input-group-addon.btn.btn-default.fileinput-exists{"data-dismiss" => "fileinput", :href => "#"} Удалить
+    .col-sm-2
+      -unless object.picture.try(:file).nil?
+        -if object.picture.file.exists?
+          -if object.picture.url(:mini_thumb).present?
+            =image_tag object.picture.url(:mini_thumb)
+          -else
+            =image_tag object.picture.url
+  .hr-line-dashed
+
+-if object.respond_to?(:first_name)
+  .form-group
+    %label.col-lg-2.control-label Имя
+    .col-lg-10
+      =f.text_field :first_name, class: "form-control"
+  .hr-line-dashed
+
+-if object.respond_to?(:last_name)
+  .form-group
+    %label.col-lg-2.control-label Фамилия
+    .col-lg-10
+      =f.text_field :last_name, class: "form-control"
+  .hr-line-dashed
+
+-if object.respond_to?(:facebook)
+  .form-group
+    %label.col-lg-2.control-label Фейсбук
+    .col-lg-10
+      =f.text_field :facebook, class: "form-control"
+      %span.help-block.m-b-none Полноценная ссылка, т.е. http://facebook.com/MartaSummers
+  .hr-line-dashed
+
+-if object.respond_to?(:company)
+  .form-group
+    %label.col-lg-2.control-label Компания
+    .col-lg-10
+      =f.text_field :company, class: "form-control"
+      %span.help-block.m-b-none Компания, в которой работает спикер
+  .hr-line-dashed
+
+-if object.respond_to?(:position)
+  .form-group
+    %label.col-lg-2.control-label Должность
+    .col-lg-10
+      =f.text_field :position, class: "form-control"
+  .hr-line-dashed

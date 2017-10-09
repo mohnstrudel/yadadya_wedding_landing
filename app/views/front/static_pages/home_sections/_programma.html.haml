@@ -1,0 +1,12 @@
+%ul.g-program__list
+  -@lectures.each_with_index do |lecture, index|
+    %li.g-program__item.js-animation.js-animation_tablet.js-animation_mobile.js-animation_point{"data-animation-delay" => "#{100+100*index}ms"}
+      .g-program__point
+      .g-program__time=lecture.timeframe
+      .g-program__desc
+        %p.g-program__title=lecture.title
+        -if lecture.speakers.present?
+          %p.g-program__speaker
+            ="Спикер: #{lecture.speakers.first.first_name} #{lecture.speakers.first.last_name},"
+            %nobr=lecture.speakers.first.position
+            ="#{lecture.speakers.first.company}."

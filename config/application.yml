@@ -1,0 +1,30 @@
+# Add configuration values here, as shown below.
+#
+# pusher_app_id: "2954"
+# pusher_key: 7381a978f7dd7f9a1117
+# pusher_secret: abdc3b896a0ffb85d373
+# stripe_api_key: sk_test_2J0l093xOyW72XUYJHE4Dv2r
+# stripe_publishable_key: pk_test_ro9jV5SNwGb1yYlQfzG17LHK
+#
+# production:
+#   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
+#   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
+
+
+
+
+production:
+  devise_secret_key: 75ff9143406c57ba78af83b28f698546f43f1ccc501eeb0f45e2822cdd40fafba4e0adec779339168283a2cf538837fe201b9b2fd4d7680289f5424763e596d5
+  wedding_landing_database_password: scuaKquy9GagaqtmFUuhR33k2F2kWq
+  secret_key_base: 970a224774525ba9fd78ae06737025fa418e28897299c6bb644a002b63c5f45f09dc5caada0936689919e74d6ce35d9c9ba6626c1a2e0c07bbd4c064e07552ae
+
+  MAILER_USER: Yadadya
+  MAILER_PASSWORD: R6RY3fxj1KcZyHO85suwOA
+  HOSTNAME: yadadya.com
+
+development:
+  devise_secret_key: 75ff9143406c57ba78af83b28f698546f43f1ccc501eeb0f45e2822cdd40fafba4e0adec779339168283a2cf538837fe201b9b2fd4d7680289f5424763e596d5
+
+  MAILER_USER: Yadadya
+  MAILER_PASSWORD: R6RY3fxj1KcZyHO85suwOA
+  HOSTNAME: localhost:3000

@@ -1,0 +1,158 @@
+.row
+  .col-lg-12
+    .ibox.float-e-margins
+      .ibox-title
+        %h5
+          ="#{object_name(object).pluralize.capitalize} here"
+        .ibox-tools
+          %a.collapse-link
+            %i.fa.fa-chevron-up
+          %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+            %i.fa.fa-wrench
+          %ul.dropdown-menu.dropdown-user
+            %li
+              %a{:href => "#"} Config option 1
+            %li
+              %a{:href => "#"} Config option 2
+          %a.close-link
+            %i.fa.fa-times
+      .ibox-content
+        .row
+          .col-sm-12.m-b-xs
+            .pull-right
+              =link_to "Create new #{object_name(object)}", send("new_admin_#{local_assigns[:namespace]}#{object_name(object)}_path"), class: "btn btn-w-m btn-primary"
+        .table-responsive
+          %table.table.table-striped
+            %thead
+              %tr
+                %th
+                -if object.has_attribute? :url
+                  %th URL
+                -if object.has_attribute? :picture
+                  %th Фото
+                -if object.has_attribute? :title
+                  %th
+                    =t('admin.form.model.title')
+                -if object.has_attribute? :first_name
+                  %th
+                    Имя
+                -if object.has_attribute? :last_name
+                  %th
+                    Фамилия
+                -if object.has_attribute? :body
+                  %th
+                    =t('admin.form.model.body')
+                -if object.has_attribute? :slug
+                  %th
+                    ЧПУ
+                -if object_name(object) == 'request'
+                  %th
+                    Телефон
+                -else
+                  -if object.has_attribute? :email
+                    %th
+                      Email
+
+                -if object.has_attribute? :event_id
+                  %th
+                    Мероприятие
+
+                -if object.has_attribute? :payment_status
+                  %th
+                    Статус оплаты
+
+                -if object.has_attribute? :approval_status
+                  %th
+                    Статус аппрува
+                -if object.has_attribute? :sortable_date
+                  %th
+                    Дата проведения
+                %th
+                  Дата создания
+                %th.text-right
+                  =t('admin.form.actions.main')
+            %tbody
+              -object.each do |obj|
+                %tr
+                  %td
+                    %input.i-checks{:name => "input[]", :type => "checkbox"}/
+                  -if obj.respond_to?(:url)
+                    %td
+                      =obj.url
+                  -if obj.respond_to?(:picture)
+                    %td
+                      =image_tag obj.picture.try(:mini_thumb).try(:url)
+                  -if obj.respond_to?(:title)
+                    %td
+                      =obj.title    
+                  -if obj.respond_to?(:first_name)
+                    %td
+                      =obj.first_name
+                  -if obj.respond_to?(:last_name)
+                    %td
+                      =obj.last_name
+                  -if obj.respond_to?(:body)
+                    %td
+                      %small
+                        =obj.body
+                  -if obj.respond_to?(:slug)
+                    %td
+                      =url_for_page(obj)
+                  -if object_name(object) == 'request'
+                    %td
+                      =obj.phone
+                  -else
+                    -if obj.respond_to?(:email)
+                      %td
+                        =obj.email
+                  -if obj.respond_to?(:event)
+                    %td
+                      =obj.event.present? ? "#{obj.event.title} - #{obj.event.subtitle}" : "N/A"
+
+                  -if obj.respond_to?(:payment_status)
+                    %td
+                      -if obj.payment_status == false
+                        %span.label.label-warning Ожидается
+                      -elsif obj.payment_status == true
+                        %span.label.label-success Оплачено
+                      -else
+                        N/A
+
+                  -if obj.respond_to?(:approval_status)
+                    %td
+                      -if obj.approval_status == "pending" || obj.approval_status == 'false'
+                        %span.label.label-warning Ожидается
+                      -elsif obj.approval_status === "true" || obj.approval_status == "approved"
+                        %span.label.label-success Аппрув
+                      -elsif obj.approval_status == "declined"
+                        %span.label.label-danger Отказ
+                      -else
+                        N/A
+
+                  -if obj.respond_to?(:sortable_date)
+                    %td
+                      =obj.sortable_date.strftime("%d %B %Y")
+
+                  %td
+                    =time_ago_in_words(obj.created_at)
+                    =t('admin.form.created_ago')
+                  %td.text-right
+                    .btn-group
+                      / Если объект - реквест, то показываем ещё две кнопки, принять и отклонить
+                      -if object_name(object) == 'request'
+                        =link_to "Approve", admin_approve_request_path(obj), class: "btn-primary btn btn-xs"
+                        =link_to "Decline", admin_decline_request_path(obj), class: "btn-danger btn btn-xs"
+                        %a.dropdown-toggle.btn-white.btn.btn-xs{"data-toggle" => "dropdown", :href => "#"}
+                          %i.fa.fa-wrench
+                        %ul.dropdown-menu.dropdown-user
+                          %li
+                            =link_to t('admin.form.actions.edit'), send("edit_admin_#{local_assigns[:namespace]}#{object_name(object)}_path", obj)
+                          %li
+                            =link_to t('admin.form.actions.delete'), send("admin_#{local_assigns[:namespace]}#{object_name(object)}_path", obj), method: :delete, data: {confirm: t('admin.form.confirm') }
+                      -else
+                        =link_to t('admin.form.actions.edit'), send("edit_admin_#{local_assigns[:namespace]}#{object_name(object)}_path", obj), class: "btn-white btn btn-xs"
+                        =link_to t('admin.form.actions.delete'), send("admin_#{local_assigns[:namespace]}#{object_name(object)}_path", obj), method: :delete, data: {confirm: t('admin.form.confirm') }, class: "btn-white btn btn-xs"
+        .row
+          .col-sm-12.m-b-xs
+            =render partial: "admin/shared/form/listing/pager", locals: { object: object }
+            / %ul.pagination.pull-right

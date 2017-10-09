@@ -1,0 +1,15 @@
+
+
+-if object.respond_to?(:email)
+  .form-group
+    %label.col-lg-2.control-label Email
+    .col-lg-10
+      =f.text_field :email, class: "form-control"
+  .hr-line-dashed
+
+-if object.respond_to?(:password)
+  .form-group
+    %label.col-lg-2.control-label Password
+    .col-lg-10
+      =f.password_field :password, class: "form-control"
+  .hr-line-dashed

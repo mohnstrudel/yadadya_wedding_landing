@@ -1,0 +1,19 @@
+.ibox.float-e-margins
+  .ibox-title
+    %h5 История
+    .ibox-tools
+      %span.label.label-warning-light.pull-right="#{@ticket_groups.count} мероприятий"
+  .ibox-content
+    %div
+      .feed-activity-list
+        -@ticket_groups.each do |key, value|
+          .feed-element
+            %a.pull-left{:href => "profile.html"}
+              =image_tag "landing/event_icon.jpg", class: "img-circle"
+              
+            .media-body
+              %small.pull-right="#{time_ago_in_words(value.first.created_at)} ago"
+              %strong Приобрел билет
+              ="на мероприятие #{Event.find(key).title}"
+              %br/
+              %small.text-muted="#{Event.find(key).date}"

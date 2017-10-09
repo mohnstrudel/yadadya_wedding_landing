@@ -1,0 +1,40 @@
+.g-wrapper
+  %h2.g-title
+    %span.g-title__text оТЧЁТ
+  .g-report__wrapper
+    .g-report__left.g-report__item.g-report__item_big
+      .g-report__container
+        -if @archive.try(:youtube).present?
+          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => "#{@archive.youtube}", :width => "560"}
+        -else
+          %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/YE7VzlLtp-4", :width => "560"}
+    .g-report__right
+      -if @archive.try(:pictures).present?
+        -@archive.pictures.first(6).each do |picture|
+          .g-report__item
+            .g-report__container
+              %a.g-lightbox{"data-lightbox" => "menu_2", "data-title" => @event.title, :href => picture.image.url, :style => "background-image: url(#{asset_path picture.image.news_thumb.url})"}
+      -else
+        .g-report__item
+          .g-report__container
+            %a.g-lightbox{"data-lightbox" => "menu_2", "data-title" => "Какой-то текст", :href => "img/top-bg.jpg", :style => "background-image: url(#{asset_path 'landing/top-bg.jpg'})"}
+        .g-report__item
+          .g-report__container
+            %a.g-lightbox{"data-lightbox" => "menu_2", "data-title" => "Какой-то текст", :href => "img/top-bg.jpg", :style => "background-image: url(#{asset_path 'landing/top-bg.jpg'})"}
+        .g-report__item
+          .g-report__container
+            %a.g-lightbox{"data-lightbox" => "menu_2", "data-title" => "Какой-то текст", :href => "img/top-bg.jpg", :style => "background-image: url(#{asset_path 'landing/top-bg.jpg'})"}
+        .g-report__item
+          .g-report__container
+            %a.g-lightbox{"data-lightbox" => "menu_2", "data-title" => "Какой-то текст", :href => "img/top-bg.jpg", :style => "background-image: url(#{asset_path 'landing/top-bg.jpg'})"}
+        .g-report__item
+          .g-report__container
+            %a.g-lightbox{"data-lightbox" => "menu_2", "data-title" => "Какой-то текст", :href => "img/top-bg.jpg", :style => "background-image: url(#{asset_path 'landing/top-bg.jpg'})"}
+        .g-report__item
+          .g-report__container
+            %a.g-lightbox{"data-lightbox" => "menu_2", "data-title" => "Какой-то текст", :href => "img/top-bg.jpg", :style => "background-image: url(#{asset_path 'landing/top-bg.jpg'})"}
+  -if @archive.try(:zip).present?
+    %a.g-btn.g-btn_download.js-btn{:href => @archive.zip, target: "_blank"}
+      сКАЧАТЬ АРХИВ
+      %svg.g-btn-icon.g-btn-icon_download
+        %use{"xlink:href" => "#ic-btn-download"}

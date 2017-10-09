@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="70" viewBox="0 0 100 70">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: #226d4f;
+      }
+
+      .cls-2, .cls-5 {
+        fill: #16d488;
+      }
+
+      .cls-3 {
+        fill: #c1ecdb;
+      }
+
+      .cls-4, .cls-5 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <rect id="Shape_978_copy" data-name="Shape 978 copy" class="cls-1" y="10" width="100" height="60" rx="3" ry="3"/>
+  <rect class="cls-2" x="2" y="12" width="96" height="56" rx="1" ry="1"/>
+  <rect id="Shape_978_copy_3" data-name="Shape 978 copy 3" class="cls-3" x="6" y="16" width="88" height="48" rx="2" ry="2"/>
+  <path id="Rectangle_91_copy_4" data-name="Rectangle 91 copy 4" class="cls-4" d="M43,25H32V23H43A1,1,0,0,1,43,25ZM12,23H26V41H12V23Zm1,24H43a1,1,0,1,1,0,2H13A1,1,0,1,1,13,47ZM32,33V31H43a1,1,0,0,1,0,2H32Zm12,7a1,1,0,0,1-1,1H32V39H43A1,1,0,0,1,44,40ZM13,55H43a1,1,0,0,1,0,2H13A1,1,0,0,1,13,55Z"/>
+  <path id="Rectangle_91_copy_5" data-name="Rectangle 91 copy 5" class="cls-4" d="M59,23H89a1,1,0,0,1,1,1h0a1,1,0,0,1-1,1H59a1,1,0,0,1-1-1h0A1,1,0,0,1,59,23Zm0,8H89a1,1,0,0,1,1,1h0a1,1,0,0,1-1,1H59a1,1,0,0,1-1-1h0A1,1,0,0,1,59,31Zm0,8H89a1,1,0,0,1,1,1h0a1,1,0,0,1-1,1H59a1,1,0,0,1-1-1h0A1,1,0,0,1,59,39Zm0,8H89a1,1,0,0,1,1,1h0a1,1,0,0,1-1,1H59a1,1,0,0,1-1-1h0A1,1,0,0,1,59,47Zm0,8H92a1,1,0,0,1,1,1h0a1,1,0,0,1-1,1H59a1,1,0,0,1-1-1h0A1,1,0,0,1,59,55Z"/>
+  <rect class="cls-2" x="14" y="25" width="10" height="14"/>
+  <rect class="cls-1" x="50" y="12" width="2" height="56"/>
+  <path class="cls-4" d="M84,70h0V68a8,8,0,0,0,8-8c0-4.418-3.582-9-8-9V49h0V0A10,10,0,0,1,94,10V60A10,10,0,0,1,84,70Z"/>
+  <path id="Rectangle_89_copy" data-name="Rectangle 89 copy" class="cls-5" d="M86,49.2V2.261A8,8,0,0,1,92,10V53.017A9.989,9.989,0,0,0,86,49.2ZM86,2V2.261A7.966,7.966,0,0,0,84,2h2Z"/>
+</svg>

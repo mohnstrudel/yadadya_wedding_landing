@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %title Fashion в digital
+    = csrf_meta_tags
+    = stylesheet_link_tag "https://fonts.googleapis.com/css?family=Oswald:400,500&subset=cyrillic"
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", :name => "viewport"}/
+    = stylesheet_link_tag    'front', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'front', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'https://widget.cloudpayments.ru/bundles/cloudpayments'
+    =render 'layouts/social_head'
+  %body.g-body
+    =yield
+    =render 'layouts/popups'
+    =javascript_include_tag 'social'
+    =render 'layouts/social'
+  =render 'layouts/icons'

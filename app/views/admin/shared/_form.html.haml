@@ -1,0 +1,48 @@
+-if object.errors.any?
+  .panel.panel-warning
+    .panel-heading
+      %i.fa.fa-warning
+      Warning - Errors
+    .panel-body
+      %ul
+        -object.errors.each do |attribute, message| 
+          %li
+            ="#{object.class.human_attribute_name(attribute)} - #{message}"
+.row
+  -if controller_name == 'users'
+    =form_for admin_form_arguments_builder(object, local_assigns[:namespace]), :html => {:class => "form-horizontal", :multipart => true} do |f|
+      .col-lg-8
+        .tabs-container
+          %ul.nav.nav-tabs
+            %li.active
+              %a{"data-toggle" => "tab", :href => "#tab-1"}
+                =t('admin.form.tab_main.title')
+
+          .tab-content
+            #tab-1.tab-pane.active
+              .panel-body
+                =render partial: "admin/shared/form/main_fields", locals: { f: f, object: object, namespace: local_assigns[:namespace] }
+      .col-lg-4
+        =render partial: 'admin/shared/form/users/user_feed', locals: {f: f, object: object }
+  -else
+    .col-lg-12
+      =form_for admin_form_arguments_builder(object, local_assigns[:namespace]), :html => {:class => "form-horizontal"} do |f|
+        .tabs-container
+          %ul.nav.nav-tabs
+            %li.active
+              %a{"data-toggle" => "tab", :href => "#tab-1"}
+                Основное
+            -if object.respond_to?(:flag_top)
+              %li
+                %a{"data-toggle" => "tab", :href => "#tab-2"}
+                  Статичная информация
+
+
+          .tab-content
+            #tab-1.tab-pane.active
+              .panel-body
+                =render partial: "admin/shared/form/main_fields", locals: { f: f, object: object, namespace: local_assigns[:namespace] }
+            -if object.respond_to?(:flag_top)
+              #tab-2.tab-pane
+                .panel-body
+                  =render partial: "admin/shared/form/event/static_fields", locals: { f: f, object: object }

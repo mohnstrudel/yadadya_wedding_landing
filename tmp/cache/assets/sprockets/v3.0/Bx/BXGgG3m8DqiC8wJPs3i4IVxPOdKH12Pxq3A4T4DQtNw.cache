@@ -1,0 +1,72 @@
+{:uriI"�file://app/assets/images/landing/mailers/mail.html?type=text/html&id=7cc2b8c88e2c951a80eb0a59f98f58b9664158cde5036b0c94668894f6b2792c:ET:load_pathI"app/assets/images;T:filenameI"0app/assets/images/landing/mailers/mail.html;T:	nameI"landing/mailers/mail;T:logical_pathI"landing/mailers/mail.html;T:content_typeI"text/html;T:sourceI"?<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Mail</title>
+</head>
+<body style="margin: 0;">
+	<style type="text/css">
+		.button{
+			transition: background-color 250ms linear;
+		}
+		.button:hover{
+			background-color: #164834;
+		}
+	</style>
+	<div style="padding: 10px;background-color: #fff;">
+		<table style="max-width: 640px; width: 100%; background-color: #edf5f2; font-family: 'Lato', Arial, sans-serif" border="0" cellspacing="0">
+			<thead>
+				<tr>
+					<td style="background-repeat: no-repeat;
+								background-size: cover;
+								background-position: center;
+								padding-top: 62px;
+								padding-bottom: 71px;
+								"
+						background='code.png'>
+						<img src="top_text.png" style="display: block;margin: 0 auto;max-width: 137px;width: 60%;margin-bottom: 12px;">
+						<img src="title.png" style="display: block;margin: 0 auto;max-width: 289px;width: 90%;">
+					</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align: center;padding-bottom: 68px;">
+						<div style="margin: 40px auto 24px; width: 96px; line-height: 96px; height: 96px; background-color: #fff; border-radius: 50%; font-size: 0;">
+							<img src="icon.png" style="display: inline-block; vertical-align: middle; width: 56px;height: auto;">
+						</div>
+						<p style="color: #0e2f22;  font-size: 20px; line-height: 30px; margin: 0;">Ваша заявка одобрена!</p>
+						<p style="color: #0e2f22;font-weight: 300;font-size: 20px;line-height: 30px;margin: -1px auto 35px;">Для подтверждения в&nbsp;участии <br>вам необходимо оплатить билет <a href="#" style="color: #16d488; text-decoration: none;">по ссылке</a>.</p>
+						<a href="#" class="button" style="display: inline-block; text-decoration: none; width: 230px; height: 60px; background-color: #16d287; border-radius: 30px; line-height: 60px;">
+							<img src="buy.png" style="display: inline-block; vertical-align: middle;">
+						</a>
+					</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td style="padding: 0 40px;text-align: center;font-size: 0;padding-bottom: 37px;">
+						<p style="border-top: 1px solid #d9e7e2;text-align: center;font-weight: 300;font-size: 16px;line-height: 24px;margin: 0;padding-top: 38px;padding-bottom: 10px;">
+							© 2013 - 2017 Интернет-агентство Я.Creations. Все права защищены.
+						</p>
+						<a href="#" style="display: inline-block;padding: 10px;">
+							<img src="inst_social.png">
+						</a>
+						<a href="#" style="display: inline-block;padding: 10px;">
+							<img src="fb_social.png">
+						</a>
+						<a href="#" style="display: inline-block;padding: 10px;">
+							<img src="yadadya_social.png">
+						</a>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+</body>
+</html>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI">file-digest://app/assets/images/landing/mailers/mail.html;TTF:charsetI"
+utf-8;F:digest"%#ߧ~��)6s��TP[JiC-�-��,0N�o~F:lengthi?:dependencies_digest"%��p巎�B��5�mk�EC�1�m�Y���ܠ��:idI"E7cc2b8c88e2c951a80eb0a59f98f58b9664158cde5036b0c94668894f6b2792c;F:
+mtimel+��Y

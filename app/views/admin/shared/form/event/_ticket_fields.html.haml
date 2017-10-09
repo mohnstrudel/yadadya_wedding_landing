@@ -1,0 +1,46 @@
+.ticket_row
+
+  .col-sm-6  
+    .form-group
+      %label.col-sm-2.control-label
+        Спикер
+      .col-sm-10
+        =f.collection_select(:ticket_type_id, TicketType.all, :id, :title, { include_blank: "Выбрать тип билета" }, class: 'form-control select2_ticket_type')
+
+    .form-group
+      %label.col-sm-6.text-left
+        Кол-во билетов
+      .col-sm-6
+        =f.number_field :amount, class: 'form-control'
+
+    .form-group
+      %label.col-sm-6.text-left
+        Нужен аппрув?
+      .col-sm-6
+        =f.check_box :approval, class: 'form-control'
+    .hr-line-dashed
+
+  .col-sm-6
+
+    .form-group
+      %label.col-sm-2.control-label
+        Цена
+      .col-sm-10
+        =f.number_field :price, class: 'form-control'
+
+    .form-group
+      %label.col-sm-2.control-label
+        Описание
+      .col-sm-10
+        =f.text_area :description, class: 'form-control', rows: 2
+        %span.help-block.m-b-none Данное описание перезапишет дефолтное описание!
+    .hr-line-dashed
+
+
+    
+
+  
+  .form-group 
+    %span.input-group-btn.text-right
+      =f.hidden_field :_destroy
+      =link_to "Удалить билет", "#", class: "remove_ticket_record btn btn-danger"

@@ -1,0 +1,147 @@
+.g-content
+  %section.g-section.g-main.g-main_animated
+    .g-wrapper
+      %h2.g-main__top=@event.try(:event_type)
+      %h1.g-main__title=@event.try(:title)
+      %h3.g-main__subtitle=@event.try(:subtitle)
+    %h3.g-main__bottom-text
+      =@event.try(:date)
+      в 
+      ="#{@start_time} - #{@end_time}, #{@event.try(:place)}"
+  %section.g-section.g-description
+    .g-wrapper.js-animation.js-animation_tablet.js-animation_fadeInDown{"data-animation-delay" => "900ms"}
+      %p.g-description__top
+        -if @event.try(:flag_top)
+          =@event.flag_top.html_safe
+        -else
+          %span.g-strong
+            =@event.try(:date)
+          приглашаем представителей модных брендов
+          %br 
+            на бизнес-завтрак
+            %span.g-strong«Fashion в digital».
+      .g-img-wrapper.g-img-wrapper_description.g-description__img
+        =image_tag 'landing/flag.svg', class: 'g-img-wrapper__pic'
+        =image_tag 'landing/flag_bg.svg', class: 'g-img-wrapper__bg'
+      %p.g-description__bottom
+        -if @event.try(:flag_bottom)
+          =@event.flag_bottom
+        -else
+          Поговорим о том, как выстроить
+          %br/
+          %nobr онлайн-продажи
+          в этом сегменте.
+
+  %section.g-section.g-points
+    =render partial: 'front/static_pages/home_sections/povestka'
+  
+  %section.g-section.g-pic-block
+    .g-wrapper
+      %p.g-pic-block__top.js-animation.js-animation_tablet.js-animation_fadeInDown{"data-animation-delay" => "300ms"}
+        -if @event.try(:mesto_top)
+          =@event.mesto_top.html_safe
+        -else
+          Мы хотим сделать наш
+          %nobr бизнес-завтрак
+          максимально полезным вам. Готовьте, пожалуйста, вопросы — их можно будет задать экспертам в онце мероприятия и обсудить в кулуарах).
+      .g-pic-block__img-wrapper.js-animation.js-animation_tablet.js-animation_fadeInLeft{"data-animation-delay" => "300ms"}
+        -if @event.try(:mesto_logo).present?
+          =image_tag @event.mesto_logo, class: 'g-pic-block__img'
+        -else
+          =image_tag 'landing/pic.png', class: 'g-pic-block__img'
+        
+      %p.g-pic-block__bottom.js-animation.js-animation_tablet.js-animation_fadeInUp{"data-animation-delay" => "300ms"}
+        -if @event.try(:mesto_bottom)
+          =@event.mesto_bottom.html_safe
+        -else
+          За атмосферу мероприятия будет отвечать Dictatura Estetica Bar, культовое место на территории фабрики «Красный Октябрь», объединившее бар и бутиковое ателье по пошиву рубашек.
+  
+  %section.g-section.g-whom
+    =render partial: 'front/static_pages/home_sections/komu_interesno'
+    
+  %section.g-section.g-speakers
+    .g-wrapper
+      %h2.g-title
+        %span.g-title__text Спикеры
+      -if @speakers
+        =render partial: 'front/static_pages/home_sections/speakers'
+
+  %section.g-section.g-program
+    .g-wrapper
+      %h2.g-title.js-animation.js-animation_tablet.js-animation_fadeInDown
+        %span.g-title__text
+          Программа
+          %br.g-mobile мероприятия
+      -if @lectures
+        =render partial: 'front/static_pages/home_sections/programma'
+      
+  %section.g-section.g-organizers
+    .g-wrapper
+      %h2.g-title.js-animation.js-animation_fadeInDown
+        %span.g-title__text Партнеры
+      -if @organizers
+        =render partial: 'front/static_pages/home_sections/partners'
+  
+  %section.g-section.g-organizers-desc
+    .g-wrapper
+      .g-organizers-desc__top
+        .g-organizers-desc__left
+          %h2.g-organizers-desc__title FASHION в DIgital
+        .g-organizers-desc__right
+          Цикл ежемесячных бизнес-завтраков, посвященный развитию и продвижению модных брендов в интернете. За завтраком эксперты со стороны fashion-брендов и digital-агентств разбирают актуальные для этого сегмента рынка вопросы, связанные с разработкой интернет-магазинов, работой с соцсетями, модными изданиями и другим маркетинговым инструментарием
+      .g-organizers-desc__item
+        .g-organizers-desc__img-wrapper
+          =image_tag 'landing/organizers/yadadya.svg', class: 'g-organizers-desc__img g-organizers-desc__img_yadadya'
+        %input#yadadya-toggle-text.g-toggle-checkbox{:name => "toggle-text", :type => "checkbox"}/
+        .g-organizers-desc__text.g-organizers-desc__text_hidden
+          Интернет-агентство Я.Сreations работает над повышением эффективности бизнесов своих клиентов с 2013 года. Мы занимаемся разработкой, развитием и продвижением корпоративных сайтов, интернет-магазинов, мобильных приложений и сервисов. 
+          %p Отдаем предпочтение сложным комплексным проектам и нестандартным задачам. У нас много клиентов из fashion-индустрии. 
+        %label.g-mobile.g-text-toggle{:for => "yadadya-toggle-text"}
+          %span.g-text-toggle__small Читать полностью
+          %span.g-text-toggle__open Свернуть
+      
+      .g-organizers-desc__item
+        .g-organizers-desc__img-wrapper
+          =image_tag 'landing/organizers/fbr.svg', class: 'g-organizers-desc__img g-organizers-desc__img_fbr'
+        .g-organizers-desc__text
+          fbr.agency (#fuckbusinessrivals) специализируется на консалтинге и сопровождении
+          = succeed "," do
+            %nobr digital-агентств
+          %nobr IT-компаний
+          и стартапов в области PR, маркетинга и продаж.
+  
+  %section.g-section.g-contact
+    =render partial: 'front/static_pages/home_sections/contacts'
+
+  %section.g-section.g-report
+    =render partial: 'front/static_pages/home_sections/archives'
+    
+  %footer.g-footer
+    .g-wrapper
+      %p.g-copy
+        © 2013 - 2017
+        Интернет-агентство Я.Creations.
+        %br Все права защищены.
+      %a.g-social.g-social_fb{href: "https://www.facebook.com/yadadyacreations/", target: "_blank"}
+        %svg.g-social__img.g-social__img_fb
+          %use{"xlink:href" => "#ic-fb-footer"}
+        %span.g-social__text
+          Мы
+          = succeed "\u{432}\u{a0}Facebook" do
+            %br/
+      %a.g-social.g-social_bitrix{href: "https://www.1c-bitrix.ru/partners/901268.php", target: "_blank"}
+        %svg.g-social__img.g-social__img_bitrix
+          %use{"xlink:href" => "#ic-bitrix"}
+        %span.g-social__text
+          Золотой партнёр
+          %br>/
+          «1С-Битрикс»
+      %a.g-social.g-social_interact{href: "http://www.i-association.ru/members/view/37", target: "_blank"}
+        %svg.g-social__img.g-social__img_interact
+          %use{"xlink:href" => "#ic-interact"}
+        %svg.g-social__img.g-social__img-small.g-social__img_interact_small
+          %use{"xlink:href" => "#ic-interact_small"}
+        %span.g-social__text
+          Член ассоциации
+          %br>/
+          интерактивных агентств

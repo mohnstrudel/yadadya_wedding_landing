@@ -1,0 +1,8 @@
+-if object.respond_to?(:approval_status)
+  .form-group
+    %label.col-sm-2.control-label
+      Статус аппрува
+    .col-sm-10
+      =f.select :approval_status, options_for_select(Rails.application.config.request_statuses, object.approval_status), {}, {class: 'form-control select2_approval_status'}
+      %span.help-block.m-b-none При смене статуса пользователю отправляется уведомление.
+  .hr-line-dashed

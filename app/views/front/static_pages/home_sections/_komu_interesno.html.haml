@@ -1,0 +1,33 @@
+.g-wrapper
+  %h2.g-title.js-animation.js-animation_fadeInDown
+    %span.g-title__text Кому будет интересно
+  %ul#whom-slider.g-icons
+    %li.g-icons__item.js-animation.js-animation_fadeInUp{"data-animation-delay" => "100ms"}
+      .g-img-wrapper.g-img-wrapper_managers.js-tilter
+        =image_tag 'landing/whom_1.svg', class: 'g-img-wrapper__pic tilter__figure'
+        =image_tag 'landing/whom_1_bg.svg', class: 'g-img-wrapper__bg'
+      %p.g-icons__text Бренд-менеджерам
+    %li.g-icons__item.js-animation.js-animation_fadeInUp{"data-animation-delay" => "300ms"}
+      .g-img-wrapper.g-img-wrapper_marketing.js-tilter
+        =image_tag 'landing/whom_2.svg', class: 'g-img-wrapper__pic tilter__figure'
+        =image_tag 'landing/whom_2_bg.svg', class: 'g-img-wrapper__bg'
+      %p.g-icons__text Директорам по маркетингу
+    %li.g-icons__item.js-animation.js-animation_fadeInUp{"data-animation-delay" => "500ms"}
+      .g-img-wrapper.g-img-wrapper_smm.js-tilter
+        =image_tag 'landing/whom_3.svg', class: 'g-img-wrapper__pic tilter__figure'
+        =image_tag 'landing/whom_3_bg.svg', class: 'g-img-wrapper__bg'
+      %p.g-icons__text SMM-специалистам
+    %li.g-icons__item.js-animation.js-animation_fadeInUp{"data-animation-delay" => "700ms"}
+      .g-img-wrapper.g-img-wrapper_digital.js-tilter
+        =image_tag 'landing/whom_4.svg', class: 'g-img-wrapper__pic tilter__figure'
+        =image_tag 'landing/whom_4_bg.svg', class: 'g-img-wrapper__bg'
+      %p.g-icons__text Digital-менеджерам
+    %li.g-icons__item.js-animation.js-animation_fadeInUp{"data-animation-delay" => "900ms"}
+      .g-img-wrapper.g-img-wrapper_media.js-tilter
+        =image_tag 'landing/whom_5.svg', class: 'g-img-wrapper__pic tilter__figure'
+        =image_tag 'landing/whom_5_bg.svg', class: 'g-img-wrapper__bg'
+      %p.g-icons__text Представителям СМИ
+  %a.g-btn.g-btn_registration.js-btn{:href => "#form"}
+    Зарегистрироваться
+    %svg.g-btn-icon.g-btn-icon_arrow
+      %use{"xlink:href" => "#ic-btn-arrow"}

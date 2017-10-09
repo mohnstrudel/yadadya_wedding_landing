@@ -1,0 +1,86 @@
+.ibox.float-e-margins
+  .ibox-title
+    %h5
+      ="#{controller.action_name.capitalize} #{object.class.name}"
+      %small With custom checbox and radion elements.
+    .ibox-tools
+      %a.collapse-link
+        %i.fa.fa-chevron-up
+      %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+        %i.fa.fa-wrench
+      %ul.dropdown-menu.dropdown-user
+        %li
+          %a{:href => "#"} Config option 1
+        %li
+          %a{:href => "#"} Config option 2
+      %a.close-link
+        %i.fa.fa-times
+  .ibox-content
+
+    =render partial: "admin/shared/form/speaker/speaker_fields", locals: { f: f, object: object }
+
+    -if object.respond_to?(:title)
+      .form-group
+        %label.col-sm-2.control-label
+          Заголовок
+        .col-sm-10
+          =f.text_field :title, class: 'form-control'
+      .hr-line-dashed
+    / Fields for general settings start (only unique fields)
+    =render partial: "admin/shared/form/general_settings_fields", locals: {f: f, object: object}
+
+    =render partial: "admin/shared/form/organizer/organizer_fields", locals: {f: f, object: object}
+    
+    -if object.respond_to?(:description)
+      .form-group
+        %label.col-sm-2.control-label
+          Описание
+        .col-sm-10
+          =f.bootsy_area :description, class: 'form-control'
+          %span.help-block.m-b-none Более подробное описание 
+      .hr-line-dashed
+    -if object.respond_to?(:body)
+      .form-group
+        %label.col-sm-2.control-label
+          =t('admin.form.model.body')
+        .col-sm-10
+          =f.bootsy_area :body, class: 'form-control', rows: 12
+      .hr-line-dashed
+    -if object.respond_to?(:slug)
+      .form-group
+        %label.col-sm-2.control-label
+          =t('admin.form.model.slug')
+        .col-sm-10
+          =f.text_field :slug, class: 'form-control'
+      .hr-line-dashed
+    -if object.respond_to?(:page_category_id)
+      .form-group
+        %label.col-lg-2.control-label
+          =t('admin.form.model.category')
+        .col-lg-10
+          =f.select :page_category_id, PageCategory.all.map { |page_category| [ page_category.title, page_category.id ] }, {}, { class: "form-control m-b" } 
+      .hr-line-dashed
+    -if object.respond_to?(:post_category_id)
+      .form-group
+        %label.col-lg-2.control-label
+          =t('admin.form.model.category')
+        .col-lg-10
+          =f.select :post_category_id, PostCategory.all.map { |post_category| [ post_category.title, post_category.id ] }, {}, { class: "form-control m-b" }
+      .hr-line-dashed
+
+    / User part begin (only unique to user fields)
+    =render partial: "admin/shared/form/user_fields", locals: { f: f, object: object }
+    / User part end
+
+    =render partial: "admin/shared/form/event/event_fields", locals: { f: f, object: object }
+
+    =render partial: "admin/shared/form/archives/archive_fields", locals: { f: f, object: object }
+
+    =render partial: "admin/shared/form/requests/request_fields", locals: { f: f, object: object }
+
+
+    .hr-line-dashed
+    .form-group
+      .col-sm-4.col-sm-offset-2
+        =link_to "Назад", send("admin_#{local_assigns[:namespace]}#{object_name(object).pluralize}_path"), class: 'btn btn-white'
+        =f.submit "Сохранить", class: 'btn btn-primary'

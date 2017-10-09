@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %title Y.CMS
+    = stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  %body{class: "#{controller_name} #{action_name}"}
+    -if current_user
+      #wrapper
+        =render 'admin/navigation/left_menu'
+        #page-wrapper.gray-bg
+          =render 'admin/navigation/header'
+          =render 'admin/navigation/breadcrumbs'
+          .wrapper.wrapper-content.animated.fadeInRight
+            =render 'admin/navigation/alerts'
+            =yield
+          =render 'admin/navigation/footer'
+        =render 'admin/navigation/right_sidebar'
+
+    -else
+      =yield
+
+  = javascript_include_tag 'admin', 'data-turbolinks-track' => true

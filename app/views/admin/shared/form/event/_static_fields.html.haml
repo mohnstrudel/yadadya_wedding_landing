@@ -1,0 +1,209 @@
+.ibox.float-e-margins
+  .ibox-title
+    %h5
+      Статичная информация
+      %small Второй блок (флажок), повестка и место проведения
+    .ibox-tools
+      %a.collapse-link
+        %i.fa.fa-chevron-up
+      %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+        %i.fa.fa-wrench
+      %ul.dropdown-menu.dropdown-user
+        %li
+          %a{:href => "#"} Config option 1
+        %li
+          %a{:href => "#"} Config option 2
+      %a.close-link
+        %i.fa.fa-times
+  .ibox-content
+
+    -if object.respond_to?(:flag_top)
+      .form-group
+        %label.col-sm-2.control-label
+          Надпись над иконкой флажка
+        .col-sm-10
+          =f.bootsy_area :flag_top, class: 'form-control', rows: 2
+      .hr-line-dashed
+
+    -if object.respond_to?(:flag_bottom)
+      .form-group
+        %label.col-sm-2.control-label
+          Надпись под иконкой флажка
+        .col-sm-10
+          =f.bootsy_area :flag_bottom, class: 'form-control', rows: 2
+      .hr-line-dashed
+
+
+    -if object.respond_to?(:povestka_1_text)
+      .form-group
+        %label.col-sm-2.control-label Повестка 1
+        .col-sm-10
+          =f.text_field :povestka_1_text, class: 'form-control'
+          %span.help-block.m-b-none Текст для первой повестки (самый левый текст)
+      .hr-line-dashed
+
+    -if object.respond_to?(:povestka_1_logo)
+      .form-group
+        %label.col-sm-2.control-label Лого повестки 1
+        .col-sm-8
+          .fileinput.fileinput-new.input-group{"data-provides" => "fileinput"}
+            .form-control{"data-trigger" => "fileinput"}
+              %i.glyphicon.glyphicon-file.fileinput-exists
+              %span.fileinput-filename
+            %span.input-group-addon.btn.btn-default.btn-file
+              %span.fileinput-new Выбрать файл
+              %span.fileinput-exists Изменить
+              =f.file_field :povestka_1_logo
+              
+            %a.input-group-addon.btn.btn-default.fileinput-exists{"data-dismiss" => "fileinput", :href => "#"} Удалить
+        .col-sm-2
+          -if object.povestka_1_logo.present?
+            =image_tag object.povestka_1_logo.url(:mini_thumb)
+      .hr-line-dashed
+
+    -if object.respond_to?(:povestka_2_text)
+      .form-group
+        %label.col-sm-2.control-label Повестка 2
+        .col-sm-10
+          =f.text_field :povestka_2_text, class: 'form-control'
+          %span.help-block.m-b-none Текст для второй повестки
+      .hr-line-dashed
+
+    -if object.respond_to?(:povestka_2_logo)
+      .form-group
+        %label.col-sm-2.control-label Лого повестки 2
+        .col-sm-8
+          .fileinput.fileinput-new.input-group{"data-provides" => "fileinput"}
+            .form-control{"data-trigger" => "fileinput"}
+              %i.glyphicon.glyphicon-file.fileinput-exists
+              %span.fileinput-filename
+            %span.input-group-addon.btn.btn-default.btn-file
+              %span.fileinput-new Выбрать файл
+              %span.fileinput-exists Изменить
+              =f.file_field :povestka_2_logo
+              
+            %a.input-group-addon.btn.btn-default.fileinput-exists{"data-dismiss" => "fileinput", :href => "#"} Удалить
+        .col-sm-2
+          -if object.povestka_2_logo.present?
+            =image_tag object.povestka_2_logo.url(:mini_thumb)
+      .hr-line-dashed
+
+    -if object.respond_to?(:povestka_3_text)
+      .form-group
+        %label.col-sm-2.control-label Повестка 3
+        .col-sm-10
+          =f.text_field :povestka_3_text, class: 'form-control'
+          %span.help-block.m-b-none Текст для третьей повестки (центральный текст)
+      .hr-line-dashed
+
+    -if object.respond_to?(:povestka_3_logo)
+      .form-group
+        %label.col-sm-2.control-label Лого повестки 3
+        .col-sm-8
+          .fileinput.fileinput-new.input-group{"data-provides" => "fileinput"}
+            .form-control{"data-trigger" => "fileinput"}
+              %i.glyphicon.glyphicon-file.fileinput-exists
+              %span.fileinput-filename
+            %span.input-group-addon.btn.btn-default.btn-file
+              %span.fileinput-new Выбрать файл
+              %span.fileinput-exists Изменить
+              =f.file_field :povestka_3_logo
+              
+            %a.input-group-addon.btn.btn-default.fileinput-exists{"data-dismiss" => "fileinput", :href => "#"} Удалить
+        .col-sm-2
+          -if object.povestka_3_logo.present?
+            =image_tag object.povestka_3_logo.url(:mini_thumb)
+      .hr-line-dashed
+
+    -if object.respond_to?(:povestka_4_text)
+      .form-group
+        %label.col-sm-2.control-label Повестка 4
+        .col-sm-10
+          =f.text_field :povestka_4_text, class: 'form-control'
+          %span.help-block.m-b-none Текст для четвертой повестки
+      .hr-line-dashed
+
+    -if object.respond_to?(:povestka_4_logo)
+      .form-group
+        %label.col-sm-2.control-label Лого повестки 1
+        .col-sm-8
+          .fileinput.fileinput-new.input-group{"data-provides" => "fileinput"}
+            .form-control{"data-trigger" => "fileinput"}
+              %i.glyphicon.glyphicon-file.fileinput-exists
+              %span.fileinput-filename
+            %span.input-group-addon.btn.btn-default.btn-file
+              %span.fileinput-new Выбрать файл
+              %span.fileinput-exists Изменить
+              =f.file_field :povestka_4_logo
+              
+            %a.input-group-addon.btn.btn-default.fileinput-exists{"data-dismiss" => "fileinput", :href => "#"} Удалить
+        .col-sm-2
+          -if object.povestka_4_logo.present?
+            =image_tag object.povestka_4_logo.url(:mini_thumb)
+      .hr-line-dashed
+
+    -if object.respond_to?(:povestka_5_text)
+      .form-group
+        %label.col-sm-2.control-label Повестка 5
+        .col-sm-10
+          =f.text_field :povestka_5_text, class: 'form-control'
+          %span.help-block.m-b-none Текст для пятой повестки (самый правый текст)
+      .hr-line-dashed
+
+    -if object.respond_to?(:povestka_5_logo)
+      .form-group
+        %label.col-sm-2.control-label Лого повестки 5
+        .col-sm-8
+          .fileinput.fileinput-new.input-group{"data-provides" => "fileinput"}
+            .form-control{"data-trigger" => "fileinput"}
+              %i.glyphicon.glyphicon-file.fileinput-exists
+              %span.fileinput-filename
+            %span.input-group-addon.btn.btn-default.btn-file
+              %span.fileinput-new Выбрать файл
+              %span.fileinput-exists Изменить
+              =f.file_field :povestka_5_logo
+              
+            %a.input-group-addon.btn.btn-default.fileinput-exists{"data-dismiss" => "fileinput", :href => "#"} Удалить
+        .col-sm-2
+          -if object.povestka_5_logo.present?
+            =image_tag object.povestka_5_logo.url(:mini_thumb)
+      .hr-line-dashed
+
+
+    -if object.respond_to?(:mesto_top)
+      .form-group
+        %label.col-sm-2.control-label Текст для места (вверх)
+        .col-sm-10
+          =f.text_field :mesto_top, class: 'form-control'
+          %span.help-block.m-b-none Текст располагается НАД картинкой с местом проведения
+      .hr-line-dashed
+    -if object.respond_to?(:mesto_logo)
+      .form-group
+        %label.col-sm-2.control-label Картинка для места проведения
+        .col-sm-8
+          .fileinput.fileinput-new.input-group{"data-provides" => "fileinput"}
+            .form-control{"data-trigger" => "fileinput"}
+              %i.glyphicon.glyphicon-file.fileinput-exists
+              %span.fileinput-filename
+            %span.input-group-addon.btn.btn-default.btn-file
+              %span.fileinput-new Выбрать файл
+              %span.fileinput-exists Изменить
+              =f.file_field :mesto_logo
+              
+            %a.input-group-addon.btn.btn-default.fileinput-exists{"data-dismiss" => "fileinput", :href => "#"} Удалить
+        .col-sm-2
+          -if object.mesto_logo.present?
+            =image_tag object.mesto_logo.url(:mini_thumb)
+      .hr-line-dashed
+    -if object.respond_to?(:mesto_bottom)
+      .form-group
+        %label.col-sm-2.control-label Текст для места (низ)
+        .col-sm-10
+          =f.text_field :mesto_bottom, class: 'form-control'
+          %span.help-block.m-b-none Текст располагается ПОД картинкой с местом проведения
+      .hr-line-dashed
+
+      .form-group
+        .col-sm-4.col-sm-offset-2
+          =link_to "Назад", send("admin_#{local_assigns[:namespace]}#{object_name(object).pluralize}_path"), class: 'btn btn-white'
+          =f.submit "Сохранить", class: 'btn btn-primary'
