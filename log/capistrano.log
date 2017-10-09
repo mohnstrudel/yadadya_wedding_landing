@@ -22588,3 +22588,735 @@ Using /home/deploy/apps/fashion_landing/releases/20171007134058/config/webpacker
   INFO [e476c34c] Finished in 0.091 seconds with exit status 0 (successful).
  DEBUG Building Rollbar POST to https://api.rollbar.com/api/1/deploy/ with {:local_username=>"mohnstrudel", :access_token=>"8902b1c1f836403fb38ad2d90443e7d1", :environment=>:production, :revision=>"916051426b8ad0f79eaf95c2c61e38c6c662e779"}
   INFO Rollbar notification complete.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-10-09 11:29:44 +0300 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [08d83b65] Running [ -d ~/.rvm ] on 92.53.97.113
+ DEBUG [08d83b65] Command: [ -d ~/.rvm ]
+ DEBUG [08d83b65] Finished in 0.539 seconds with exit status 0 (successful).
+ DEBUG [378b42a9] Running ~/.rvm/bin/rvm version on 92.53.97.113
+ DEBUG [378b42a9] Command: ~/.rvm/bin/rvm version
+ DEBUG [378b42a9] 	rvm 1.29.1 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [378b42a9] Finished in 0.437 seconds with exit status 0 (successful).
+ DEBUG [91dbc71a] Running ~/.rvm/bin/rvm current on 92.53.97.113
+ DEBUG [91dbc71a] Command: ~/.rvm/bin/rvm current
+ DEBUG [91dbc71a] 	ruby-2.4.1
+ DEBUG [91dbc71a] Finished in 0.343 seconds with exit status 0 (successful).
+ DEBUG [8bc8d935] Running ~/.rvm/bin/rvm default do ruby --version on 92.53.97.113
+ DEBUG [8bc8d935] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [8bc8d935] 	ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+ DEBUG [8bc8d935] Finished in 0.578 seconds with exit status 0 (successful).
+  INFO [f071b5e8] Running /usr/bin/env mkdir -p /tmp on 92.53.97.113
+ DEBUG [f071b5e8] Command: /usr/bin/env mkdir -p /tmp
+  INFO [f071b5e8] Finished in 0.050 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-wedding_landing-production-mohnstrudel.sh 0.0%
+  INFO Uploading /tmp/git-ssh-wedding_landing-production-mohnstrudel.sh 100.0%
+  INFO [1594fed3] Running /usr/bin/env chmod 700 /tmp/git-ssh-wedding_landing-production-mohnstrudel.sh on 92.53.97.113
+ DEBUG [1594fed3] Command: /usr/bin/env chmod 700 /tmp/git-ssh-wedding_landing-production-mohnstrudel.sh
+  INFO [1594fed3] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [44a90ee9] Running /usr/bin/env git ls-remote git@github.com:mohnstrudel/yadadya_wedding_landing.git HEAD on 92.53.97.113
+ DEBUG [44a90ee9] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wedding_landing-production-mohnstrudel.sh" ; /usr/bin/env git ls-remote git@github.com:mohnstrudel/yadadya_wedding_landing.git HEAD )
+ DEBUG [44a90ee9] 	838600f3bb39d5a8cb5f5e1820423b06a5fed8bd	HEAD
+  INFO [44a90ee9] Finished in 2.072 seconds with exit status 0 (successful).
+  INFO [ae4390f2] Running /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/shared /home/deploy/apps/wedding_landing/releases on 92.53.97.113
+ DEBUG [ae4390f2] Command: /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/shared /home/deploy/apps/wedding_landing/releases
+  INFO [ae4390f2] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [ca22a6ae] Running /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/shared/log /home/deploy/apps/wedding_landing/shared/tmp/pids /home/deploy/apps/wedding_landing/shared/tmp/cache /home/deploy/apps/wedding_landing/shared/tmp/sockets /home/deploy/apps/wedding_landing/shared/vendor/bundle /home/deploy/apps/wedding_landing/shared/public/system /home/deploy/apps/wedding_landing/shared/public/uploads /home/deploy/apps/wedding_landing/shared/node_modules /home/deploy/apps/wedding_landing/shared/client/node_modules /home/deploy/apps/wedding_landing/shared/public/assets on 92.53.97.113
+ DEBUG [ca22a6ae] Command: /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/shared/log /home/deploy/apps/wedding_landing/shared/tmp/pids /home/deploy/apps/wedding_landing/shared/tmp/cache /home/deploy/apps/wedding_landing/shared/tmp/sockets /home/deploy/apps/wedding_landing/shared/vendor/bundle /home/deploy/apps/wedding_landing/shared/public/system /home/deploy/apps/wedding_landing/shared/public/uploads /home/deploy/apps/wedding_landing/shared/node_modules /home/deploy/apps/wedding_landing/shared/client/node_modules /home/deploy/apps/wedding_landing/shared/public/assets
+  INFO [ca22a6ae] Finished in 0.116 seconds with exit status 0 (successful).
+ DEBUG [5ccc48e6] Running [ -f /home/deploy/apps/wedding_landing/shared/puma.rb ] on 92.53.97.113
+ DEBUG [5ccc48e6] Command: [ -f /home/deploy/apps/wedding_landing/shared/puma.rb ]
+ DEBUG [5ccc48e6] Finished in 0.087 seconds with exit status 1 (failed).
+  WARN puma.rb NOT FOUND!
+ DEBUG Uploading /home/deploy/apps/wedding_landing/shared/puma.rb 0.0%
+  INFO Uploading /home/deploy/apps/wedding_landing/shared/puma.rb 100.0%
+  INFO puma.rb generated
+ DEBUG [4922adba] Running [ -f /home/deploy/apps/wedding_landing/current/REVISION ] on 92.53.97.113
+ DEBUG [4922adba] Command: [ -f /home/deploy/apps/wedding_landing/current/REVISION ]
+ DEBUG [4922adba] Finished in 0.090 seconds with exit status 1 (failed).
+ DEBUG [873ad075] Running [ -f /home/deploy/apps/wedding_landing/repo/HEAD ] on 92.53.97.113
+ DEBUG [873ad075] Command: [ -f /home/deploy/apps/wedding_landing/repo/HEAD ]
+ DEBUG [873ad075] Finished in 0.116 seconds with exit status 1 (failed).
+ DEBUG [07a6e6df] Running if test ! -d /home/deploy/apps/wedding_landing; then echo "Directory does not exist '/home/deploy/apps/wedding_landing'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [07a6e6df] Command: if test ! -d /home/deploy/apps/wedding_landing; then echo "Directory does not exist '/home/deploy/apps/wedding_landing'" 1>&2; false; fi
+ DEBUG [07a6e6df] Finished in 0.087 seconds with exit status 0 (successful).
+  INFO [bebe1236] Running /usr/bin/env git clone --mirror git@github.com:mohnstrudel/yadadya_wedding_landing.git /home/deploy/apps/wedding_landing/repo on 92.53.97.113
+ DEBUG [bebe1236] Command: cd /home/deploy/apps/wedding_landing && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wedding_landing-production-mohnstrudel.sh" ; /usr/bin/env git clone --mirror git@github.com:mohnstrudel/yadadya_wedding_landing.git /home/deploy/apps/wedding_landing/repo )
+ DEBUG [bebe1236] 	Cloning into bare repository '/home/deploy/apps/wedding_landing/repo'...
+ DEBUG [bebe1236] 	
+ DEBUG [bebe1236] 	remote: Counting objects: 21383, done.[K
+ DEBUG [bebe1236] 	
+ DEBUG [bebe1236] 	remote: Compressing objects:   0% (1/17205)   [Kremote: Compressing objects:   1% (173/17205)   [Kremote: Compressing objects:   2% (345/17205)   [Kremote: Compressing objects:   3% (517/17205)   [Kremote: Compressing objects:   4% (689/17205)   [Kremote: Compressing objects:   5% (861/17205)   [K
+ DEBUG [bebe1236] 	remote: Compressing objects:   6% (1033/17205)   [Kremote: Compressing objects:   7% (1205/17205)   [Kremote: Compressing objects:   8% (1377/17205)   [Kremote: Compressing objects:   9% (1549/17205)   [Kremote: Compressing objects:  10% (1721/17205)   [Kremote: Compressing objects:  11% (1893/17205)   [K
+ DEBUG [bebe1236] 	remote: Compressing objects:  12% (2065/17205)   [Kremote: Compressing objects:  13% (2237/17205)   [Kremote: Compressing objects:  14% (2409/17205)   [Kremote: Compressing objects:  15% (2581/17205)   [Kremote: Compressing objects:  16% (2753/17205)   [Kremote: Compressing objects:  17% (2925/17205)   [K
+ DEBUG [bebe1236] 	remote: Compressing objects:  18% (3097/17205)   [Kremote: Compressing objects:  19% (3269/17205)   [Kremote: Compressing objects:  20% (3441/17205)   [Kremote: Compressing objects:  21% (3614/17205)   [Kremote: Compressing objects:  22% (3786/17205)   [Kremote: Compressing objects:  23% (3958/17205)   [Kremote: Compressing objects:  24% (4130/17205)   [Kremote: Compressing objects:  25% (4302/17205)   [Kremote: Compressing objects:  26% (4474/17205)   [Kremote: Compressing objects:  27% (4646/17205)   [Kremote: Compressing objects:  28% (4818/17205)   [Kremote: Compressing objects:  29% (4990/17205)   [Kremote: Compressing objects:  30% (5162/17205)   [Kremote: Compressing objects:  31% (5334/17205)   [Kremote: Compressing objects:  32% (5506/17205)   [Kremote: Compressing objects:  33% (5678/17205)   [Kremote: Compressing objects:  34% (5850/17205)   [Kremote: Compressing objects:  35% (6022/17205)   [Kremote: Compressing objects:  36% (6194/17205)   [Kremote: Compressing objects:  37% (6366/17205)   [Kremote: Compressing objects:  38% (6538/17205)   [Kremote: Compressing objects:  39% (6710/17205)   [Kremote: Compressing objects:  40% (6882/17205)   [Kremote: Compressing objects:  41% (7055/17205)   [Kremote: Compressing objects:  42% (7227/17205)   [Kremote: Compressing objects:  43% (7399/17205)   [Kremote: Compressing objects:  44% (7571/17205)   [Kremote: Compressing objects:  45% (7743/17205)   [Kremote: Compressing objects:  46% (7915/17205)   [Kremote: Compressing objects:  47% (8087/17205)   [Kremote: Compressing objects:  48% (8259/17205)   [Kremote: Compressing objects:  49% (8431/17205)   [Kremote: Compressing objects:  50% (8603/17205)   [Kremote: Compressing objects:  51% (8775/17205)   [Kremote: Compressing objects:  52% (8947/17205)   [Kremote: Compressing objects:  53% (9119/17205)   [Kremote: Compressing objects:  54% (9291/17205)   [Kremote: Compressing objects:  55% (9463/17205)   [Kremote: Compressing objects:  56% (9635/17205)   [Kremote: Compressing objects:  57% (9807/17205)   [Kremote: Compressing objects:  58% (9979/17205)   [K
+ DEBUG [bebe1236] 	remote: Compressing objects:  59% (10151/17205)   [Kremote: Compressing objects:  60% (10323/17205)   [Kremote: Compressing objects:  61% (10496/17205)   [Kremote: Compressing objects:  62% (10668/17205)   [Kremote: Compressing objects:  63% (10840/17205)   [Kremote: Compressing objects:  64% (11012/17205)   [Kremote: Compressing objects:  65% (11184/17205)   [Kremote: Compressing objects:  66% (11356/17205)   [Kremote: Compressing objects:  67% (11528/17205)   [Kremote: Compressing objects:  68% (11700/17205)   [Kremote: Compressing objects:  69% (11872/17205)   [Kremote: Compressing objects:  70% (12044/17205)   [Kremote: Compressing objects:  71% (12216/17205)   [Kremote: Compressing objects:  72% (12388/17205)   [Kremote: Compressing objects:  73% (12560/17205)   [Kremote: Compressing objects:  74% (12732/17205)   [Kremote: Compressing objects:  75% (12904/17205)   [Kremote: Compressing objects:  76% (13076/17205)   [Kremote: Compressing objects:  77% (13248/17205)   [Kremote: Compressing objects:  78% (13420/17205)   [Kremote: Compressing objects:  79% (13592/17205)   [Kremote: Compressing objects:  80% (13764/17205)   [Kremote: Compressing objects:  81% (13937/17205)   [Kremote: Compressing objects:  82% (14109/17205)   [Kremote: Compressing objects:  83% (14281/17205)   [Kremote: Compressing objects:  84% (14453/17205)   [Kremote: Compressing objects:  85% (14625/17205)   [Kremote: Compressing objects:  86% (14797/17205)   [Kremote: Compressing objects:  87% (14969/17205)   [Kremote: Compressing objects:  88% (15141/17205)   [Kremote: Compressing objects:  89% (15313/17205)   [Kremote: Compressing objects:  90% (15485/17205)   [Kremote: Compressing objects:  91% (15657/17205)   [Kremote: Compressing objects:  92% (15829/17205)   [Kremote: Compressing objects:  93% (16001/17205)   [Kremote: Compressing objects:  94% (16173/17205)   [Kremote: Compressing objects:  95% (16345/17205)   [Kremote: Compressing objects:  96% (16517/17205)   [Kremote: Compressing objects:  97% (16689/17205)   [Kremote: Compressing objects:  98% (16861/17205)   [Kremote: Compressing objects:  99% (17033/17205)   [Kremote: Compressing objects: 100% (17205/17205)   [Kremote: Compressing objects: 100% (17205/17205), done.[K
+ DEBUG [bebe1236] 	Receiving objects:   0% (1/21383)   
+ DEBUG [bebe1236] 	Receiving objects:   0% (15/21383), 932.00 KiB | 901.00 KiB/s   
+ DEBUG [bebe1236] 	Receiving objects:   0% (67/21383), 2.41 MiB | 1.01 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:   0% (84/21383), 2.97 MiB | 1.02 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:   1% (214/21383), 2.97 MiB | 1.02 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:   2% (428/21383), 2.97 MiB | 1.02 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:   2% (454/21383), 4.10 MiB | 1.05 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:   3% (642/21383), 4.38 MiB | 995.00 KiB/s   
+ DEBUG [bebe1236] 	Receiving objects:   4% (856/21383), 4.38 MiB | 995.00 KiB/s   
+ DEBUG [bebe1236] 	Receiving objects:   5% (1070/21383), 4.38 MiB | 995.00 KiB/s   
+ DEBUG [bebe1236] 	Receiving objects:   5% (1075/21383), 5.32 MiB | 1.06 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:   6% (1283/21383), 5.32 MiB | 1.06 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:   7% (1497/21383), 5.32 MiB | 1.06 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:   8% (1711/21383), 5.88 MiB | 1.11 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:   9% (1925/21383), 5.88 MiB | 1.11 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  10% (2139/21383), 5.88 MiB | 1.11 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  10% (2287/21383), 5.88 MiB | 1.11 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  11% (2353/21383), 6.43 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  11% (2537/21383), 7.56 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  11% (2540/21383), 8.68 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  11% (2542/21383), 9.62 MiB | 1.13 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  12% (2566/21383), 9.62 MiB | 1.13 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  13% (2780/21383), 9.62 MiB | 1.13 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  14% (2994/21383), 9.62 MiB | 1.13 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  15% (3208/21383), 10.37 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  15% (3254/21383), 10.37 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  16% (3422/21383), 10.37 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  17% (3636/21383), 10.93 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  18% (3849/21383), 10.93 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  19% (4063/21383), 10.93 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  20% (4277/21383), 11.50 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  20% (4464/21383), 11.50 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  21% (4491/21383), 11.50 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  22% (4705/21383), 11.50 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  23% (4919/21383), 12.06 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  24% (5132/21383), 12.06 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  25% (5346/21383), 12.06 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  26% (5560/21383), 12.06 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  27% (5774/21383), 12.62 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  28% (5988/21383), 12.62 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  29% (6202/21383), 12.62 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  30% (6415/21383), 12.62 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  30% (6429/21383), 12.62 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  31% (6629/21383), 12.62 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  32% (6843/21383), 12.62 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  33% (7057/21383), 13.18 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  34% (7271/21383), 13.18 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  35% (7485/21383), 13.75 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  36% (7698/21383), 13.75 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  36% (7743/21383), 13.75 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  37% (7912/21383), 13.75 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  38% (8126/21383), 14.31 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  39% (8340/21383), 14.31 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  40% (8554/21383), 14.31 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  41% (8768/21383), 14.87 MiB | 1.14 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  42% (8981/21383), 14.87 MiB | 1.14 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  42% (9005/21383), 14.87 MiB | 1.14 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  43% (9195/21383), 15.43 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  44% (9409/21383), 15.43 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  45% (9623/21383), 16.00 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  46% (9837/21383), 16.00 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  46% (9925/21383), 16.00 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  47% (10051/21383), 16.00 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  48% (10264/21383), 16.00 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  49% (10478/21383), 16.00 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  50% (10692/21383), 16.56 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  50% (10777/21383), 17.12 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  51% (10906/21383), 17.12 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  52% (11120/21383), 17.12 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  53% (11333/21383), 17.12 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  54% (11547/21383), 17.68 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  55% (11761/21383), 17.68 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  56% (11975/21383), 17.68 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  56% (12166/21383), 18.21 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  57% (12189/21383), 18.21 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  58% (12403/21383), 18.61 MiB | 1.00 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  58% (12579/21383), 18.61 MiB | 1.00 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  59% (12616/21383), 18.61 MiB | 1.00 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  60% (12830/21383), 20.08 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  60% (12887/21383), 20.08 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  61% (13044/21383), 20.64 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  62% (13258/21383), 20.64 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  63% (13472/21383), 20.64 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  64% (13686/21383), 20.64 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  65% (13899/21383), 21.18 MiB | 1.07 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  66% (14113/21383), 21.18 MiB | 1.07 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  67% (14327/21383), 21.18 MiB | 1.07 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  67% (14342/21383), 21.18 MiB | 1.07 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  68% (14541/21383), 21.18 MiB | 1.07 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  69% (14755/21383), 22.11 MiB | 1.02 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  70% (14969/21383), 22.11 MiB | 1.02 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  71% (15182/21383), 22.11 MiB | 1.02 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  71% (15301/21383), 22.11 MiB | 1.02 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  72% (15396/21383), 22.11 MiB | 1.02 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  73% (15610/21383), 22.96 MiB | 1.07 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  74% (15824/21383), 22.96 MiB | 1.07 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  75% (16038/21383), 22.96 MiB | 1.07 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  75% (16047/21383), 23.52 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  75% (16050/21383), 24.58 MiB | 1.07 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  75% (16071/21383), 25.74 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  75% (16140/21383), 27.43 MiB | 1.15 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  75% (16239/21383), 27.99 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  76% (16252/21383), 27.99 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  77% (16465/21383), 28.55 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  77% (16537/21383), 29.11 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  78% (16679/21383), 29.11 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  78% (16742/21383), 30.24 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  78% (16882/21383), 31.36 MiB | 1.11 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  79% (16893/21383), 31.36 MiB | 1.11 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  79% (17032/21383), 32.48 MiB | 1.11 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  80% (17107/21383), 33.04 MiB | 1.11 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  80% (17250/21383), 33.61 MiB | 1.11 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  81% (17321/21383), 34.17 MiB | 1.11 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  81% (17333/21383), 34.73 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  82% (17535/21383), 34.73 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  82% (17585/21383), 35.86 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  83% (17748/21383), 36.42 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  83% (17755/21383), 36.98 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  83% (17930/21383), 37.54 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  84% (17962/21383), 37.73 MiB | 1.02 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  84% (18132/21383), 39.20 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  85% (18176/21383), 39.20 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  85% (18213/21383), 39.76 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  85% (18319/21383), 40.89 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  86% (18390/21383), 42.00 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  86% (18398/21383), 42.54 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  86% (18535/21383), 43.11 MiB | 1.16 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  87% (18604/21383), 44.22 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  87% (18627/21383), 44.22 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  87% (18758/21383), 45.35 MiB | 1.08 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  88% (18818/21383), 46.47 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  88% (18935/21383), 46.47 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  89% (19031/21383), 47.04 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  90% (19245/21383), 47.60 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  90% (19266/21383), 47.60 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  91% (19459/21383), 48.72 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  91% (19460/21383), 48.72 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  91% (19542/21383), 49.85 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  92% (19673/21383), 50.32 MiB | 1.02 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  92% (19737/21383), 50.32 MiB | 1.02 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  93% (19887/21383), 51.25 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  93% (19993/21383), 51.82 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  94% (20101/21383), 52.94 MiB | 1.11 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  94% (20116/21383), 52.94 MiB | 1.11 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  94% (20245/21383), 53.97 MiB | 1.04 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  94% (20308/21383), 55.47 MiB | 1.11 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  95% (20314/21383), 55.47 MiB | 1.11 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  95% (20371/21383), 56.59 MiB | 1.11 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  95% (20484/21383), 57.71 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  96% (20528/21383), 57.71 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  96% (20673/21383), 58.84 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  97% (20742/21383), 59.40 MiB | 1.17 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  97% (20751/21383), 59.96 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  97% (20922/21383), 61.09 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  98% (20956/21383), 61.09 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  98% (21045/21383), 62.21 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  99% (21170/21383), 62.78 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  99% (21173/21383), 63.34 MiB | 1.09 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects:  99% (21273/21383), 64.46 MiB | 1.10 MiB/s   
+ DEBUG [bebe1236] 	remote: Total 21383 (delta 2760), reused 21383 (delta 2760), pack-reused 0[K
+ DEBUG [bebe1236] 	
+ DEBUG [bebe1236] 	Receiving objects: 100% (21383/21383), 64.96 MiB | 1.07 MiB/s   
+ DEBUG [bebe1236] 	Receiving objects: 100% (21383/21383), 65.02 MiB | 1.07 MiB/s, done.
+ DEBUG [bebe1236] 	
+ DEBUG [bebe1236] 	Resolving deltas:   0% (0/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:   1% (28/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:   2% (56/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:   3% (89/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:   4% (116/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:   5% (143/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:   6% (166/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:   7% (197/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:   8% (221/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:   9% (256/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  10% (276/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  11% (304/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  12% (332/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  13% (373/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  14% (388/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  15% (415/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  16% (442/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  17% (470/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  18% (506/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  19% (527/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  20% (552/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  21% (583/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  22% (610/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  23% (635/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  24% (670/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  25% (700/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  27% (755/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  28% (784/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  29% (809/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  30% (837/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  31% (864/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  32% (903/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  34% (939/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  35% (968/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  36% (994/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  37% (1027/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  38% (1049/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  39% (1077/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  40% (1106/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  41% (1132/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  42% (1160/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  43% (1187/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  44% (1216/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  45% (1242/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  46% (1270/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  47% (1299/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  48% (1326/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  49% (1353/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  50% (1380/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  51% (1409/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  52% (1437/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  53% (1463/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  54% (1501/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  55% (1521/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  56% (1546/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  57% (1575/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  58% (1602/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  59% (1630/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  60% (1656/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  61% (1684/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  62% (1713/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  63% (1739/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  64% (1767/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  65% (1794/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  66% (1823/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  67% (1850/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  68% (1883/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  69% (1905/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  70% (1932/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  71% (1960/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  72% (1993/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  73% (2015/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  74% (2045/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  75% (2070/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  76% (2098/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  77% (2127/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  78% (2153/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  79% (2184/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  80% (2209/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  81% (2236/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  82% (2264/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  83% (2291/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  84% (2319/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  85% (2346/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  86% (2374/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  87% (2402/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  88% (2429/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  89% (2457/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  90% (2493/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  91% (2512/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  92% (2540/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  93% (2567/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  94% (2595/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  95% (2622/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  96% (2650/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  97% (2679/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  98% (2705/2760)   
+ DEBUG [bebe1236] 	Resolving deltas:  99% (2733/2760)   
+ DEBUG [bebe1236] 	Resolving deltas: 100% (2760/2760)   
+ DEBUG [bebe1236] 	Resolving deltas: 100% (2760/2760), done.
+ DEBUG [bebe1236] 	
+ DEBUG [bebe1236] 	Checking connectivity... 
+ DEBUG [bebe1236] 	done.
+  INFO [bebe1236] Finished in 62.092 seconds with exit status 0 (successful).
+ DEBUG [16a401e0] Running if test ! -d /home/deploy/apps/wedding_landing/repo; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/repo'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [16a401e0] Command: if test ! -d /home/deploy/apps/wedding_landing/repo; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/repo'" 1>&2; false; fi
+ DEBUG [16a401e0] Finished in 0.090 seconds with exit status 0 (successful).
+  INFO [c9df4d93] Running /usr/bin/env git remote set-url origin git@github.com:mohnstrudel/yadadya_wedding_landing.git on 92.53.97.113
+ DEBUG [c9df4d93] Command: cd /home/deploy/apps/wedding_landing/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wedding_landing-production-mohnstrudel.sh" ; /usr/bin/env git remote set-url origin git@github.com:mohnstrudel/yadadya_wedding_landing.git )
+  INFO [c9df4d93] Finished in 0.097 seconds with exit status 0 (successful).
+  INFO [e6e56124] Running /usr/bin/env git remote update --prune on 92.53.97.113
+ DEBUG [e6e56124] Command: cd /home/deploy/apps/wedding_landing/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wedding_landing-production-mohnstrudel.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [e6e56124] 	Fetching origin
+  INFO [e6e56124] Finished in 1.684 seconds with exit status 0 (successful).
+ DEBUG [81dc9989] Running if test ! -d /home/deploy/apps/wedding_landing/repo; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/repo'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [81dc9989] Command: if test ! -d /home/deploy/apps/wedding_landing/repo; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/repo'" 1>&2; false; fi
+ DEBUG [81dc9989] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [44c69e1b] Running /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/releases/20171009082949 on 92.53.97.113
+ DEBUG [44c69e1b] Command: cd /home/deploy/apps/wedding_landing/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wedding_landing-production-mohnstrudel.sh" ; /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/releases/20171009082949 )
+  INFO [44c69e1b] Finished in 0.089 seconds with exit status 0 (successful).
+  INFO [9ee9680f] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/wedding_landing/releases/20171009082949 on 92.53.97.113
+ DEBUG [9ee9680f] Command: cd /home/deploy/apps/wedding_landing/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wedding_landing-production-mohnstrudel.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/wedding_landing/releases/20171009082949 )
+  INFO [9ee9680f] Finished in 2.105 seconds with exit status 0 (successful).
+ DEBUG [3f35bdba] Running if test ! -d /home/deploy/apps/wedding_landing/repo; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/repo'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [3f35bdba] Command: if test ! -d /home/deploy/apps/wedding_landing/repo; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/repo'" 1>&2; false; fi
+ DEBUG [3f35bdba] Finished in 0.113 seconds with exit status 0 (successful).
+ DEBUG [55f9af20] Running /usr/bin/env git rev-list --max-count=1 master on 92.53.97.113
+ DEBUG [55f9af20] Command: cd /home/deploy/apps/wedding_landing/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-wedding_landing-production-mohnstrudel.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [55f9af20] 	838600f3bb39d5a8cb5f5e1820423b06a5fed8bd
+ DEBUG [55f9af20] 	
+ DEBUG [55f9af20] Finished in 0.104 seconds with exit status 0 (successful).
+ DEBUG [affad1db] Running if test ! -d /home/deploy/apps/wedding_landing/releases/20171009082949; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009082949'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [affad1db] Command: if test ! -d /home/deploy/apps/wedding_landing/releases/20171009082949; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009082949'" 1>&2; false; fi
+ DEBUG [affad1db] Finished in 0.104 seconds with exit status 0 (successful).
+  INFO [dfaad0ff] Running /usr/bin/env echo "838600f3bb39d5a8cb5f5e1820423b06a5fed8bd" >> REVISION on 92.53.97.113
+ DEBUG [dfaad0ff] Command: cd /home/deploy/apps/wedding_landing/releases/20171009082949 && /usr/bin/env echo "838600f3bb39d5a8cb5f5e1820423b06a5fed8bd" >> REVISION
+  INFO [dfaad0ff] Finished in 0.089 seconds with exit status 0 (successful).
+  INFO [6d49c132] Running /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/releases/20171009082949/config on 92.53.97.113
+ DEBUG [6d49c132] Command: /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/releases/20171009082949/config
+  INFO [6d49c132] Finished in 0.099 seconds with exit status 0 (successful).
+ DEBUG [a3148e09] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/config/application.yml ] on 92.53.97.113
+ DEBUG [a3148e09] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/config/application.yml ]
+ DEBUG [a3148e09] Finished in 0.090 seconds with exit status 1 (failed).
+ DEBUG [99dfee8c] Running [ -f /home/deploy/apps/wedding_landing/releases/20171009082949/config/application.yml ] on 92.53.97.113
+ DEBUG [99dfee8c] Command: [ -f /home/deploy/apps/wedding_landing/releases/20171009082949/config/application.yml ]
+ DEBUG [99dfee8c] Finished in 0.084 seconds with exit status 0 (successful).
+  INFO [54baa3a1] Running /usr/bin/env rm /home/deploy/apps/wedding_landing/releases/20171009082949/config/application.yml on 92.53.97.113
+ DEBUG [54baa3a1] Command: /usr/bin/env rm /home/deploy/apps/wedding_landing/releases/20171009082949/config/application.yml
+  INFO [54baa3a1] Finished in 0.096 seconds with exit status 0 (successful).
+  INFO [042f9eac] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/config/application.yml /home/deploy/apps/wedding_landing/releases/20171009082949/config/application.yml on 92.53.97.113
+ DEBUG [042f9eac] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/config/application.yml /home/deploy/apps/wedding_landing/releases/20171009082949/config/application.yml
+  INFO [042f9eac] Finished in 0.090 seconds with exit status 0 (successful).
+  INFO [73848ba5] Running /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/releases/20171009082949 /home/deploy/apps/wedding_landing/releases/20171009082949/tmp /home/deploy/apps/wedding_landing/releases/20171009082949/vendor /home/deploy/apps/wedding_landing/releases/20171009082949/public /home/deploy/apps/wedding_landing/releases/20171009082949/client on 92.53.97.113
+ DEBUG [73848ba5] Command: /usr/bin/env mkdir -p /home/deploy/apps/wedding_landing/releases/20171009082949 /home/deploy/apps/wedding_landing/releases/20171009082949/tmp /home/deploy/apps/wedding_landing/releases/20171009082949/vendor /home/deploy/apps/wedding_landing/releases/20171009082949/public /home/deploy/apps/wedding_landing/releases/20171009082949/client
+  INFO [73848ba5] Finished in 0.086 seconds with exit status 0 (successful).
+ DEBUG [e02b1f63] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/log ] on 92.53.97.113
+ DEBUG [e02b1f63] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/log ]
+ DEBUG [e02b1f63] Finished in 0.086 seconds with exit status 1 (failed).
+ DEBUG [1a182773] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/log ] on 92.53.97.113
+ DEBUG [1a182773] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/log ]
+ DEBUG [1a182773] Finished in 0.103 seconds with exit status 0 (successful).
+  INFO [8a646dab] Running /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009082949/log on 92.53.97.113
+ DEBUG [8a646dab] Command: /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009082949/log
+  INFO [8a646dab] Finished in 0.090 seconds with exit status 0 (successful).
+  INFO [c8355d3b] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/log /home/deploy/apps/wedding_landing/releases/20171009082949/log on 92.53.97.113
+ DEBUG [c8355d3b] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/log /home/deploy/apps/wedding_landing/releases/20171009082949/log
+  INFO [c8355d3b] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [b16c1414] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/pids ] on 92.53.97.113
+ DEBUG [b16c1414] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/pids ]
+ DEBUG [b16c1414] Finished in 0.090 seconds with exit status 1 (failed).
+ DEBUG [5b871896] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/pids ] on 92.53.97.113
+ DEBUG [5b871896] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/pids ]
+ DEBUG [5b871896] Finished in 0.087 seconds with exit status 0 (successful).
+  INFO [2c62f21d] Running /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/pids on 92.53.97.113
+ DEBUG [2c62f21d] Command: /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/pids
+  INFO [2c62f21d] Finished in 0.097 seconds with exit status 0 (successful).
+  INFO [381c4571] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/tmp/pids /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/pids on 92.53.97.113
+ DEBUG [381c4571] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/tmp/pids /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/pids
+  INFO [381c4571] Finished in 0.096 seconds with exit status 0 (successful).
+ DEBUG [046ca0f4] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/cache ] on 92.53.97.113
+ DEBUG [046ca0f4] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/cache ]
+ DEBUG [046ca0f4] Finished in 0.089 seconds with exit status 1 (failed).
+ DEBUG [f355ee74] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/cache ] on 92.53.97.113
+ DEBUG [f355ee74] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/cache ]
+ DEBUG [f355ee74] Finished in 0.091 seconds with exit status 0 (successful).
+  INFO [17892cf2] Running /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/cache on 92.53.97.113
+ DEBUG [17892cf2] Command: /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/cache
+  INFO [17892cf2] Finished in 0.170 seconds with exit status 0 (successful).
+  INFO [2b6ac34f] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/tmp/cache /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/cache on 92.53.97.113
+ DEBUG [2b6ac34f] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/tmp/cache /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/cache
+  INFO [2b6ac34f] Finished in 0.087 seconds with exit status 0 (successful).
+ DEBUG [da0d7963] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/sockets ] on 92.53.97.113
+ DEBUG [da0d7963] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/sockets ]
+ DEBUG [da0d7963] Finished in 0.086 seconds with exit status 1 (failed).
+ DEBUG [54e6e504] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/sockets ] on 92.53.97.113
+ DEBUG [54e6e504] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/sockets ]
+ DEBUG [54e6e504] Finished in 0.085 seconds with exit status 1 (failed).
+  INFO [08b1bd87] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/tmp/sockets /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/sockets on 92.53.97.113
+ DEBUG [08b1bd87] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/tmp/sockets /home/deploy/apps/wedding_landing/releases/20171009082949/tmp/sockets
+  INFO [08b1bd87] Finished in 0.084 seconds with exit status 0 (successful).
+ DEBUG [67551a38] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/vendor/bundle ] on 92.53.97.113
+ DEBUG [67551a38] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/vendor/bundle ]
+ DEBUG [67551a38] Finished in 0.098 seconds with exit status 1 (failed).
+ DEBUG [76825a67] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/vendor/bundle ] on 92.53.97.113
+ DEBUG [76825a67] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/vendor/bundle ]
+ DEBUG [76825a67] Finished in 0.085 seconds with exit status 1 (failed).
+  INFO [ceb133e2] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/vendor/bundle /home/deploy/apps/wedding_landing/releases/20171009082949/vendor/bundle on 92.53.97.113
+ DEBUG [ceb133e2] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/vendor/bundle /home/deploy/apps/wedding_landing/releases/20171009082949/vendor/bundle
+  INFO [ceb133e2] Finished in 0.086 seconds with exit status 0 (successful).
+ DEBUG [aad5c6f4] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/public/system ] on 92.53.97.113
+ DEBUG [aad5c6f4] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/public/system ]
+ DEBUG [aad5c6f4] Finished in 0.084 seconds with exit status 1 (failed).
+ DEBUG [10d3317a] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/public/system ] on 92.53.97.113
+ DEBUG [10d3317a] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/public/system ]
+ DEBUG [10d3317a] Finished in 0.089 seconds with exit status 1 (failed).
+  INFO [a6f1a3d5] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/public/system /home/deploy/apps/wedding_landing/releases/20171009082949/public/system on 92.53.97.113
+ DEBUG [a6f1a3d5] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/public/system /home/deploy/apps/wedding_landing/releases/20171009082949/public/system
+  INFO [a6f1a3d5] Finished in 0.100 seconds with exit status 0 (successful).
+ DEBUG [ac04f3fd] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/public/uploads ] on 92.53.97.113
+ DEBUG [ac04f3fd] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/public/uploads ]
+ DEBUG [ac04f3fd] Finished in 0.089 seconds with exit status 1 (failed).
+ DEBUG [437b59b9] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/public/uploads ] on 92.53.97.113
+ DEBUG [437b59b9] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/public/uploads ]
+ DEBUG [437b59b9] Finished in 0.105 seconds with exit status 0 (successful).
+  INFO [2b765376] Running /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009082949/public/uploads on 92.53.97.113
+ DEBUG [2b765376] Command: /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009082949/public/uploads
+  INFO [2b765376] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [0bf32c21] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/public/uploads /home/deploy/apps/wedding_landing/releases/20171009082949/public/uploads on 92.53.97.113
+ DEBUG [0bf32c21] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/public/uploads /home/deploy/apps/wedding_landing/releases/20171009082949/public/uploads
+  INFO [0bf32c21] Finished in 0.092 seconds with exit status 0 (successful).
+ DEBUG [3f9464d6] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/node_modules ] on 92.53.97.113
+ DEBUG [3f9464d6] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/node_modules ]
+ DEBUG [3f9464d6] Finished in 0.094 seconds with exit status 1 (failed).
+ DEBUG [5aeea5e5] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/node_modules ] on 92.53.97.113
+ DEBUG [5aeea5e5] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/node_modules ]
+ DEBUG [5aeea5e5] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [097ca4a4] Running /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009082949/node_modules on 92.53.97.113
+ DEBUG [097ca4a4] Command: /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009082949/node_modules
+  INFO [097ca4a4] Finished in 0.479 seconds with exit status 0 (successful).
+  INFO [f25ce737] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/node_modules /home/deploy/apps/wedding_landing/releases/20171009082949/node_modules on 92.53.97.113
+ DEBUG [f25ce737] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/node_modules /home/deploy/apps/wedding_landing/releases/20171009082949/node_modules
+  INFO [f25ce737] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [98af2852] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/client/node_modules ] on 92.53.97.113
+ DEBUG [98af2852] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/client/node_modules ]
+ DEBUG [98af2852] Finished in 0.086 seconds with exit status 1 (failed).
+ DEBUG [8835da28] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/client/node_modules ] on 92.53.97.113
+ DEBUG [8835da28] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/client/node_modules ]
+ DEBUG [8835da28] Finished in 0.089 seconds with exit status 1 (failed).
+  INFO [3b409190] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/client/node_modules /home/deploy/apps/wedding_landing/releases/20171009082949/client/node_modules on 92.53.97.113
+ DEBUG [3b409190] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/client/node_modules /home/deploy/apps/wedding_landing/releases/20171009082949/client/node_modules
+  INFO [3b409190] Finished in 0.087 seconds with exit status 0 (successful).
+ DEBUG [10b3378d] Running [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/public/assets ] on 92.53.97.113
+ DEBUG [10b3378d] Command: [ -L /home/deploy/apps/wedding_landing/releases/20171009082949/public/assets ]
+ DEBUG [10b3378d] Finished in 0.113 seconds with exit status 1 (failed).
+ DEBUG [6f28613f] Running [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/public/assets ] on 92.53.97.113
+ DEBUG [6f28613f] Command: [ -d /home/deploy/apps/wedding_landing/releases/20171009082949/public/assets ]
+ DEBUG [6f28613f] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [1db30d57] Running /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009082949/public/assets on 92.53.97.113
+ DEBUG [1db30d57] Command: /usr/bin/env rm -rf /home/deploy/apps/wedding_landing/releases/20171009082949/public/assets
+  INFO [1db30d57] Finished in 0.103 seconds with exit status 0 (successful).
+  INFO [1b78aac8] Running /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/public/assets /home/deploy/apps/wedding_landing/releases/20171009082949/public/assets on 92.53.97.113
+ DEBUG [1b78aac8] Command: /usr/bin/env ln -s /home/deploy/apps/wedding_landing/shared/public/assets /home/deploy/apps/wedding_landing/releases/20171009082949/public/assets
+  INFO [1b78aac8] Finished in 0.118 seconds with exit status 0 (successful).
+ DEBUG [f1a77e9e] Running if test ! -d /home/deploy/apps/wedding_landing/releases/20171009082949; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009082949'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [f1a77e9e] Command: if test ! -d /home/deploy/apps/wedding_landing/releases/20171009082949; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009082949'" 1>&2; false; fi
+ DEBUG [f1a77e9e] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [0e091847] Running ~/.rvm/bin/rvm default do bundle check --path /home/deploy/apps/wedding_landing/shared/bundle on 92.53.97.113
+ DEBUG [0e091847] Command: cd /home/deploy/apps/wedding_landing/releases/20171009082949 && ~/.rvm/bin/rvm default do bundle check --path /home/deploy/apps/wedding_landing/shared/bundle
+ DEBUG [0e091847] 	[33mWarning: the running version of Bundler (1.15.3) is older than the version that created the lockfile (1.16.0.pre.1). We suggest you upgrade to the latest version of Bundler by running `gem install bundler --pre`.
+[0m
+ DEBUG [0e091847] 	[31mThe following gems are missing[0m
+[31m * rake (12.1.0)[0m
+ DEBUG [0e091847] 	[31m * concurrent-ruby (1.0.5)[0m
+[31m * i18n (0.8.6)[0m
+ DEBUG [0e091847] 	[31m * minitest (5.10.3)[0m
+[31m * thread_safe (0.3.6)[0m
+[31m * tzinfo (1.2.3)[0m
+ DEBUG [0e091847] 	[31m * activesupport (5.1.4)[0m
+ DEBUG [0e091847] 	[31m * builder (3.2.3)[0m
+ DEBUG [0e091847] 	[31m * erubi (1.6.1)[0m
+ DEBUG [0e091847] 	[31m * mini_portile2 (2.3.0)[0m
+ DEBUG [0e091847] 	[31m * nokogiri (1.8.1)[0m
+ DEBUG [0e091847] 	[31m * rails-dom-testing (2.0.3)[0m
+[31m * crass (1.0.2)[0m
+ DEBUG [0e091847] 	[31m * loofah (2.1.1)[0m
+ DEBUG [0e091847] 	[31m * rails-html-sanitizer (1.0.3)[0m
+ DEBUG [0e091847] 	[31m * actionview (5.1.4)[0m
+ DEBUG [0e091847] 	[31m * rack (2.0.3)[0m
+ DEBUG [0e091847] 	[31m * rack-test (0.7.0)[0m
+ DEBUG [0e091847] 	[31m * actionpack (5.1.4)[0m
+ DEBUG [0e091847] 	[31m * nio4r (2.1.0)[0m
+ DEBUG [0e091847] 	
+ DEBUG [0e091847] 	[31m * websocket-extensions (0.1.2)[0m
+ DEBUG [0e091847] 	[31m * websocket-driver (0.6.5)[0m
+ DEBUG [0e091847] 	[31m * actioncable (5.1.4)[0m
+ DEBUG [0e091847] 	[31m * globalid (0.4.0)[0m
+ DEBUG [0e091847] 	[31m * activejob (5.1.4)[0m
+ DEBUG [0e091847] 	
+ DEBUG [0e091847] 	[31m * mime-types-data (3.2016.0521)[0m
+ DEBUG [0e091847] 	[31m * mime-types (3.1)[0m
+ DEBUG [0e091847] 	[31m * mail (2.6.6)[0m
+ DEBUG [0e091847] 	[31m * actionmailer (5.1.4)[0m
+ DEBUG [0e091847] 	[31m * activemodel (5.1.4)[0m
+ DEBUG [0e091847] 	[31m * arel (8.0.0)[0m
+ DEBUG [0e091847] 	[31m * activerecord (5.1.4)[0m
+ DEBUG [0e091847] 	[31m * public_suffix (3.0.0)[0m
+ DEBUG [0e091847] 	[31m * addressable (2.5.2)[0m
+ DEBUG [0e091847] 	[31m * net-ssh (4.2.0)[0m
+ DEBUG [0e091847] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [0e091847] 	[31m * sshkit (1.14.0)[0m
+ DEBUG [0e091847] 	[31m * airbrussh (1.3.0)[0m
+ DEBUG [0e091847] 	[31m * bcrypt (3.1.11)[0m
+ DEBUG [0e091847] 	[31m * bindex (0.5.0)[0m
+ DEBUG [0e091847] 	[31m * method_source (0.9.0)[0m
+ DEBUG [0e091847] 	[31m * thor (0.20.0)[0m
+ DEBUG [0e091847] 	[31m * railties (5.1.4)[0m
+ DEBUG [0e091847] 	[31m * rb-fsevent (0.10.2)[0m
+ DEBUG [0e091847] 	[31m * ffi (1.9.18)[0m
+ DEBUG [0e091847] 	[31m * rb-inotify (0.9.10)[0m
+ DEBUG [0e091847] 	[31m * sass-listen (4.0.0)[0m
+ DEBUG [0e091847] 	[31m * sass (3.5.1)[0m
+ DEBUG [0e091847] 	[31m * bootstrap-glyphicons (0.0.1)[0m
+ DEBUG [0e091847] 	[31m * carrierwave (1.1.0)[0m
+ DEBUG [0e091847] 	[31m * mini_magick (4.8.0)[0m
+ DEBUG [0e091847] 	[31m * bootsy (2.4.0)[0m
+ DEBUG [0e091847] 	[31m * byebug (9.1.0)[0m
+ DEBUG [0e091847] 	[31m * capistrano (3.9.1)[0m
+ DEBUG [0e091847] 	[31m * capistrano-bundler (1.3.0)[0m
+ DEBUG [0e091847] 	[31m * capistrano-figaro-yml (1.0.5)[0m
+ DEBUG [0e091847] 	[31m * capistrano-nvm (0.0.7)[0m
+ DEBUG [0e091847] 	[31m * capistrano-rails (1.3.0)[0m
+ DEBUG [0e091847] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [0e091847] 	[31m * capistrano-yarn (2.0.2)[0m
+ DEBUG [0e091847] 	[31m * daemons (1.2.4)[0m
+ DEBUG [0e091847] 	[31m * capistrano3-delayed-job (1.7.3)[0m
+ DEBUG [0e091847] 	[31m * puma (3.10.0)[0m
+ DEBUG [0e091847] 	[31m * capistrano3-puma (3.1.1)[0m
+ DEBUG [0e091847] 	[31m * mini_mime (0.1.4)[0m
+ DEBUG [0e091847] 	[31m * xpath (2.1.0)[0m
+ DEBUG [0e091847] 	[31m * capybara (2.15.1)[0m
+ DEBUG [0e091847] 	[31m * childprocess (0.8.0)[0m
+ DEBUG [0e091847] 	[31m * coffee-script-source (1.12.2)[0m
+ DEBUG [0e091847] 	[31m * execjs (2.7.0)[0m
+ DEBUG [0e091847] 	[31m * coffee-script (2.4.1)[0m
+ DEBUG [0e091847] 	[31m * coffee-rails (4.2.2)[0m
+ DEBUG [0e091847] 	[31m * delayed_job (4.1.3)[0m
+ DEBUG [0e091847] 	[31m * delayed_job_active_record (4.1.2)[0m
+ DEBUG [0e091847] 	[31m * orm_adapter (0.5.0)[0m
+ DEBUG [0e091847] 	[31m * responders (2.4.0)[0m
+ DEBUG [0e091847] 	[31m * warden (1.2.7)[0m
+ DEBUG [0e091847] 	[31m * devise (4.3.0)[0m
+ DEBUG [0e091847] 	[31m * diff-lcs (1.3)[0m
+ DEBUG [0e091847] 	[31m * erubis (2.7.0)[0m
+ DEBUG [0e091847] 	
+ DEBUG [0e091847] 	[31m * factory_girl (4.8.1)[0m
+ DEBUG [0e091847] 	[31m * factory_girl_rails (4.8.0)[0m
+ DEBUG [0e091847] 	[31m * faker (1.8.4)[0m
+ DEBUG [0e091847] 	[31m * figaro (1.1.1)[0m
+ DEBUG [0e091847] 	[31m * font-awesome-rails (4.7.0.2)[0m
+ DEBUG [0e091847] 	[31m * friendly_id (5.2.3)[0m
+ DEBUG [0e091847] 	[31m * sprockets (3.7.1)[0m
+ DEBUG [0e091847] 	[31m * sprockets-rails (3.2.1)[0m
+ DEBUG [0e091847] 	[31m * rails (5.1.4)[0m
+ DEBUG [0e091847] 	[31m * get_schwifty (0.1.1)[0m
+ DEBUG [0e091847] 	[31m * temple (0.8.0)[0m
+ DEBUG [0e091847] 	[31m * tilt (2.0.8)[0m
+ DEBUG [0e091847] 	[31m * haml (5.0.3)[0m
+ DEBUG [0e091847] 	[31m * sexp_processor (4.10.0)[0m
+ DEBUG [0e091847] 	[31m * ruby_parser (3.10.1)[0m
+ DEBUG [0e091847] 	[31m * html2haml (2.2.0)[0m
+ DEBUG [0e091847] 	[31m * haml-rails (1.0.0)[0m
+ DEBUG [0e091847] 	[31m * multi_json (1.12.2)[0m
+ DEBUG [0e091847] 	[31m * jbuilder (2.7.0)[0m
+ DEBUG [0e091847] 	[31m * ruby_dep (1.5.0)[0m
+ DEBUG [0e091847] 	[31m * listen (3.1.5)[0m
+ DEBUG [0e091847] 	[31m * pg (0.21.0)[0m
+ DEBUG [0e091847] 	[31m * rack-proxy (0.6.2)[0m
+ DEBUG [0e091847] 	[31m * rollbar (2.15.4)[0m
+ DEBUG [0e091847] 	[31m * rspec-support (3.6.0)[0m
+ DEBUG [0e091847] 	[31m * rspec-core (3.6.0)[0m
+ DEBUG [0e091847] 	[31m * rspec-expectations (3.6.0)[0m
+ DEBUG [0e091847] 	[31m * rspec-mocks (3.6.0)[0m
+ DEBUG [0e091847] 	[31m * rspec-rails (3.6.1)[0m
+ DEBUG [0e091847] 	[31m * rubyzip (1.2.1)[0m
+ DEBUG [0e091847] 	[31m * sass-rails (5.0.6)[0m
+ DEBUG [0e091847] 	[31m * selenium-webdriver (3.6.0)[0m
+ DEBUG [0e091847] 	[31m * spring (2.0.2)[0m
+ DEBUG [0e091847] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [0e091847] 	[31m * turbolinks-source (5.0.3)[0m
+ DEBUG [0e091847] 	[31m * turbolinks (5.0.1)[0m
+ DEBUG [0e091847] 	[31m * uglifier (3.2.0)[0m
+ DEBUG [0e091847] 	[31m * validates_email_format_of (1.6.3)[0m
+ DEBUG [0e091847] 	[31m * web-console (3.5.1)[0m
+ DEBUG [0e091847] 	
+ DEBUG [0e091847] 	[31m * webpacker (3.0.1)[0m
+[31m * will_paginate (3.1.6)[0m
+[33mInstall missing gems with `bundle install`[0m
+ DEBUG [0e091847] Finished in 1.263 seconds with exit status 1 (failed).
+  INFO [52483830] Running ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/wedding_landing/shared/bundle --without development test --deployment --quiet on 92.53.97.113
+ DEBUG [52483830] Command: cd /home/deploy/apps/wedding_landing/releases/20171009082949 && ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/wedding_landing/shared/bundle --without development test --deployment --quiet
+ DEBUG [52483830] 	Warning, new version of rvm available '1.29.3', you are using older version '1.29.1'.
+You can disable this warning with:    echo rvm_autoupdate_flag=0 >> ~/.rvmrc
+You can enable  auto-update  with:    echo rvm_autoupdate_flag=2 >> ~/.rvmrc
+ DEBUG [52483830] 	[33mThe latest bundler is 1.16.0.pre.3, but you are currently running 1.15.3.
+To update, run `gem install bundler --pre`[0m
+  INFO [52483830] Finished in 106.572 seconds with exit status 0 (successful).
+ DEBUG [768a93d2] Running if test ! -d /home/deploy/apps/wedding_landing/releases/20171009082949/client; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009082949/client'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [768a93d2] Command: if test ! -d /home/deploy/apps/wedding_landing/releases/20171009082949/client; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009082949/client'" 1>&2; false; fi
+ DEBUG [768a93d2] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [6db4ceb6] Running /usr/bin/env yarn install --production --silent --no-progress on 92.53.97.113
+ DEBUG [6db4ceb6] Command: cd /home/deploy/apps/wedding_landing/releases/20171009082949/client && /usr/bin/env yarn install --production --silent --no-progress
+ DEBUG [6db4ceb6] 	[1G
+ DEBUG [6db4ceb6] 	⠁ 
+ DEBUG [6db4ceb6] 	[0K
+ DEBUG [6db4ceb6] 	[2K
+ DEBUG [6db4ceb6] 	[1G
+  INFO [6db4ceb6] Finished in 1.147 seconds with exit status 0 (successful).
+ DEBUG [00e36dae] Running if test ! -d /home/deploy/apps/wedding_landing/releases/20171009082949; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009082949'" 1>&2; false; fi on 92.53.97.113
+ DEBUG [00e36dae] Command: if test ! -d /home/deploy/apps/wedding_landing/releases/20171009082949; then echo "Directory does not exist '/home/deploy/apps/wedding_landing/releases/20171009082949'" 1>&2; false; fi
+ DEBUG [00e36dae] Finished in 0.092 seconds with exit status 0 (successful).
+  INFO [2ae7a5b8] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile on 92.53.97.113
+ DEBUG [2ae7a5b8] Command: cd /home/deploy/apps/wedding_landing/releases/20171009082949 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [2ae7a5b8] 	rake aborted!
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	Devise.secret_key was not set. Please add the following to your Devise initializer:
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	  config.secret_key = '459ce3113bdf4e88039ec520ec81d23da589f5abdadf777322957c86573b0475b0e7fd14a84a95c18366f4001d7f4f82bc0edf950ad069a5cd3cc1041dc84893'
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	Please ensure you restarted your application after installing Devise or setting the key.
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/devise-4.3.0/lib/devise/rails/routes.rb:498:in `raise_no_secret_key'
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/devise-4.3.0/lib/devise/rails/routes.rb:226:in `devise_for'
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	/home/deploy/apps/wedding_landing/releases/20171009082949/config/routes.rb:4:in `block in <top (required)>'
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:426:in `instance_exec'
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:426:in `eval_block'
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/actionpack-5.1.4/lib/action_dispatch/routing/route_set.rb:408:in `draw'
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	/home/deploy/apps/wedding_landing/releases/20171009082949/config/routes.rb:1:in `<top (required)>'
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:286:in `load'
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:286:in `block in load'
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:258:in `load_dependency'
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:286:in `load'
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/application/routes_reloader.rb:55:in `block in load_paths'
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/application/routes_reloader.rb:55:in `each'
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/application/routes_reloader.rb:55:in `load_paths'
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/application/routes_reloader.rb:18:in `reload!'
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	/home/deploy/apps/wedding_landing/shared/bundle/ruby/
+ DEBUG [2ae7a5b8] 	2.4.0/gems/railties-5.1.4/lib/rails/application/routes_reloader.rb:41:in `block in updater'
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/file_update_checker.rb:81:in `execute'
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/application/routes_reloader.rb:42:in `updater'
+ DEBUG [2ae7a5b8] 	
+ DEBUG [2ae7a5b8] 	/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/application/routes_reloader.rb:31:in `execute_if_updated'
+ DEBUG [2ae7a5b8] 	
+/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/application/finisher.rb:128:in `block in <module:Finisher>'
+/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/initializable.rb:30:in `instance_exec'
+/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/initializable.rb:30:in `run'
+/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/initializable.rb:59:in `block in run_initializers'
+/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/initializable.rb:58:in `run_initializers'
+/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/application.rb:353:in `initialize!'
+/home/deploy/apps/wedding_landing/releases/20171009082949/config/environment.rb:5:in `<top (required)>'
+/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `block in require'
+/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:258:in `load_dependency'
+/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/application.rb:329:in `require_environment!'
+/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/railties-5.1.4/lib/rails/application.rb:445:in `block in run_tasks_blocks'
+/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/task.rb:62:in `block (2 levels) in define'
+/home/deploy/apps/wedding_landing/shared/bundle/ruby/2.4.0/gems/rake-12.1.0/exe/rake:27:in `<top (required)>'
+/home/deploy/.rvm/gems/ruby-2.4.1/gems/bundler-1.15.3/lib/bundler/cli/exec.rb:74:in `load'
+/home/deploy/.rvm/gems/ruby-2.4.1/gems/bundler-1.15.3/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/home/deploy/.rvm/gems/ruby-2.4.1/gems/bundler-1.15.3/lib/bundler/cli/exec.rb:27:in `run'
+/home/deploy/.rvm/gems/ruby-2.4.1/gems/bundler-1.15.3/lib/bundler/cli.rb:365:in `exec'
+/home/deploy/.rvm/gems/ruby-2.4.1/gems/bundler-1.15.3/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/home/deploy/.rvm/gems/ruby-2.4.1/gems/bundler-1.15.3/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/home/deploy/.rvm/gems/ruby-2.4.1/gems/bundler-1.15.3/lib/bundler/vendor/thor/lib/thor.rb:369:in `dispatch'
+/home/deploy/.rvm/gems/ruby-2.4.1/gems/bundler-1.15.3/lib/bundler/cli.rb:22:in `dispatch'
+/home/deploy/.rvm/gems/ruby-2.4.1/gems/bundler-1.15.3/lib/bundler/vendor/thor/lib/thor/base.rb:444:in `start'
+/home/deploy/.rvm/gems/ruby-2.4.1/gems/bundler-1.15.3/lib/bundler/cli.rb:13:in `start'
+/home/deploy/.rvm/gems/ruby-2.4.1/gems/bundler-1.15.3/exe/bundle:30:in `block in <top (required)>'
+/home/deploy/.rvm/gems/ruby-2.4.1/gems/bundler-1.15.3/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/home/deploy/.rvm/gems/ruby-2.4.1/gems/bundler-1.15.3/exe/bundle:22:in `<top (required)>'
+/home/deploy/.rvm/gems/ruby-2.4.1/bin/bundle:22:in `load'
+/home/deploy/.rvm/gems/ruby-2.4.1/bin/bundle:22:in `<main>'
+/home/deploy/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/home/deploy/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => environment
+(See full trace by running task with --trace)
