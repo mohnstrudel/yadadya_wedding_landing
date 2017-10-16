@@ -1,10 +1,12 @@
 <%- logger.debug "Debugging create.js.erb - #{@request.inspect}" %>
-<%- if @ticket.approval %>
-  $('body').toggleClass("g-body_overflow");
-  $("#approval-popup").fadeToggle();
-<%- elsif @ticket.price > 0 %>
-  $('body').toggleClass("g-body_overflow");
-  $("#success-cost-popup").fadeToggle();
+<%- if @ticket %>
+  <%- if @ticket.approval %>
+    $('body').toggleClass("g-body_overflow");
+    $("#approval-popup").fadeToggle();
+  <%- elsif @ticket.price > 0 %>
+    $('body').toggleClass("g-body_overflow");
+    $("#success-cost-popup").fadeToggle();
+  <%- end %>
 <%- else %>
   $('body').toggleClass("g-body_overflow");
   $("#success-nocost-popup").fadeToggle();

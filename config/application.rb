@@ -19,6 +19,8 @@ module WeddingLanding
 
     config.request_statuses = {'Одобрение' => 'approved', 'Отказ' => 'declined', 'На рассмотрении' => 'pending'}
 
+    config.action_mailer.preview_path = "#{Rails.root}/test/mailers/previews"
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

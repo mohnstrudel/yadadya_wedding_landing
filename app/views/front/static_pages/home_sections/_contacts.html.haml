@@ -1,15 +1,5 @@
 .g-wrapper
   .g-contact__wrapper
-    .g-contact__info
-      %h3.g-contact__title Контакты
-      .g-contact__img-wrapper
-        =image_tag 'landing/speakers/inga.png', class: 'g-contact__img'
-      %h4.g-people-name.g-contact__name Инга Цохонис
-      %a.g-contact__phone +7 (977) 256-23-86
-      %a.g-contact__email{href: "mailto:inga@fbr.agency"} inga@fbr.agency
-      %a.g-btn.g-btn_transparent.g-btn_facebook{:href => "https://www.facebook.com/inga.tsokhonis", :target => "_blank"}
-        %i.g-icon
-        
     -if @event == Event.most_recent
       =form_with(model: Request.new, format: 'js', html: { class: 'g-form g-contact__form', id: 'form' }, remote: true) do |f|
         %h2.g-title.g-mobile
@@ -28,20 +18,7 @@
               %use{"xlink:href" => "#ic-input-error"}
             %svg.g-input__icon.g-input__icon_success
               %use{"xlink:href" => "#ic-input-success"}
-        .g-input
-          =f.text_field :company, class: 'g-input__field js-input', placeholder: 'Место работы', value: (current_user.company if current_user)
-          .g-input__flag
-            %svg.g-input__icon.g-input__icon_error
-              %use{"xlink:href" => "#ic-input-error"}
-            %svg.g-input__icon.g-input__icon_success
-              %use{"xlink:href" => "#ic-input-success"}
-        .g-input
-          =f.text_field :position, class: 'g-input__field js-input', placeholder: 'Должность', value: (current_user.position if current_user)
-          .g-input__flag
-            %svg.g-input__icon.g-input__icon_error
-              %use{"xlink:href" => "#ic-input-error"}
-            %svg.g-input__icon.g-input__icon_success
-              %use{"xlink:href" => "#ic-input-success"}
+
         .g-input
           =f.text_field :email, class: 'g-input__field js-input', placeholder: 'Email', value: (current_user.email if current_user)
           .g-input__flag
@@ -57,48 +34,6 @@
               %use{"xlink:href" => "#ic-input-error"}
             %svg.g-input__icon.g-input__icon_success
               %use{"xlink:href" => "#ic-input-success"}
-        .g-input
-          =f.text_field :facebook, class: 'g-input__field js-input js-input-social', placeholder: 'Ссылка на аккаунт в Facebook', value: (current_user.facebook if current_user)
-          .g-input__flag
-            %svg.g-input__icon.g-input__icon_error
-              %use{"xlink:href" => "#ic-input-error"}
-            %svg.g-input__icon.g-input__icon_success
-              %use{"xlink:href" => "#ic-input-success"}
-        -if @tickets
-          -@tickets.each_with_index do |ticket, index|
-            .g-radio
-              -if ticket.remaining_amount <= 0
-                %input.g-radio__input{:checked => (index == 0), disabled: 'disabled', :name => "request[available_ticket_id]", :type => "radio", :value => ticket.id, id: "ticket#{index+1}"}/
-                %label.g-radio__label{:for => "ticket#{index+1}"}
-                  %i.g-radio__flag
-                  %span.g-radio__price="#{ticket.price} Р" if ticket.price > 0
-                  =ticket.ticket_type.title
-                  (отсутствуют в продаже)
-                  .g-radio__info
-                    %svg.g-radio__icon
-                      %use{"xlink:href" => "#ic-info"}
-                    .g-radio__info-wrapper
-                      .g-radio__info-text
-                        -if ticket.description.present?
-                          =ticket.description
-                        -else
-                          =ticket.ticket_type.description
-                      %i.g-radio__info-arrow
-              -else
-                %input.g-radio__input{:checked => (index == 0), :name => "request[available_ticket_id]", :type => "radio", :value => ticket.id, id: "ticket#{index+1}"}/
-                %label.g-radio__label{:for => "ticket#{index+1}"}
-                  %i.g-radio__flag
-                  %span.g-radio__price="#{ticket.price} Р" if ticket.price > 0
-                  =ticket.ticket_type.title
-                  .g-radio__info
-                    %svg.g-radio__icon
-                      %use{"xlink:href" => "#ic-info"}
-                    .g-radio__info-wrapper
-                      .g-radio__info-text
-                        -if ticket.description.present?
-                          =ticket.description
-                        -else
-                          =ticket.ticket_type.description
-                      %i.g-radio__info-arrow
+        
         =f.submit "Отправить", class: 'g-btn g-btn_submit'
-      
+

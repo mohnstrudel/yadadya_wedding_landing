@@ -1,5 +1,0 @@
-#organizers-slider.g-organizers__list
-  -@organizers.each_with_index do |organizer, index|
-    %a.g-organizers__item.js-animation.js-animation_fadeInUp{"data-animation-delay" => "#{100+100*index}ms", :href => organizer.url, :target => "_blank"}
-      .g-organizers__img-wrapper
-        %img.g-organizers__img{:src => organizer.logo.url, class: "#{get_organizer_class(organizer)}"}/
