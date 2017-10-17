@@ -1,6 +1,7 @@
 class RequestMailer < ApplicationMailer
   
-  default from: 'Wedding day <conf@crazy-in-love.ru>'
+  # default from: 'Wedding day <conf@crazy-in-love.ru>'
+  default from: 'Wedding day <conf@uzhindoma.ru>'
   layout 'mailer'
   helper 'front/mail'
 
